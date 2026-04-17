@@ -1,7 +1,7 @@
 """
     pyOptiGTest - Database of unconstrained optimization test problems.
 
-    Auto-discovers all unconstrained test functions from the functions directory
+    Loads all unconstrained test function metadata from a JSON file
     and provides a unified interface for accessing problem metadata.
 
     This file is part of pyOptiGTest.
@@ -14,35 +14,33 @@
     https://github.com/luclaurent/optigtest/
 """
 
+import json
 import pathlib
+
 import numpy as np
 
-
-# ---------------------------------------------------------------------------
-# Known metadata for unconstrained problems
-# Maps function name (without 'fun' prefix) to {dim, minFglob, minXglob, space}
-# Functions not listed here get default metadata.
-# ---------------------------------------------------------------------------
-
-_FUNCTIONS_DIR = pathlib.Path(__file__).parent / "functions"
-
-# Excluded prefixes: constraint/objective functions for constrained/multi-obj
-_EXCLUDED_PREFIXES = ('funObj', 'funCons', 'funDisk')
+_JSON_FILE = pathlib.Path(__file__).parent / "dbUnconstrained.json"
 
 
-def _discover_functions():
-    """Discover all unconstrained function files from the functions directory."""
-
-    names = []
-    for f in sorted(_FUNCTIONS_DIR.glob("fun*.py")):
-        name = f.stem
-        if name == "__init__":
-            continue
-        # Skip constraint/multi-objective functions
-        if any(name.startswith(prefix) for prefix in _EXCLUDED_PREFIXES):
-            continue
-        names.append(name)
-    return names
+def _convert_entry(entry):
+    """Convert a JSON entry to the expected Python types (numpy arrays, etc.)."""
+    dim = entry.get("dim")
+    if dim == "inf":
+        entry["dim"] = np.inf
+    elif isinstance(dim, (int, float)):
+        entry["dim"] = int(dim)
+    for key in ("minFglob",):
+        if entry.get(key) is None:
+            entry[key] = np.nan
+    for key in ("minXglob",):
+        v = entry.get(key)
+        if v is None:
+            entry[key] = np.nan
+        elif isinstance(v, list):
+            entry[key] = np.asarray(v)
+    if entry.get("space") is not None:
+        entry["space"] = np.asarray(entry["space"])
+    return entry
 
 
 def listPb(dim=0):
@@ -61,25 +59,9 @@ def listPb(dim=0):
     Args:
         dim: default dimension to use (default: 0)
     """
-
-    fun_names = _discover_functions()
-    pb = {}
-
-    for fname in fun_names:
-        # Problem name is function name without 'fun' prefix
-        pb_name = fname[3:] if fname.startswith('fun') else fname
-        pb[pb_name] = {
-            'funobj': [fname],
-            'funcons': None,
-            'typecons': None,
-            'type': 'Unconstrained',
-            'dim': np.inf,
-            'minFglob': np.nan,
-            'minXglob': np.nan,
-            'space': np.array([[-5.0, 5.0]]),
-        }
-
-    return pb
+    with open(_JSON_FILE, "r") as f:
+        raw = json.load(f)
+    return {name: _convert_entry(data) for name, data in raw.items()}
 
 
 def loadPb(pbName=None, dim=0):

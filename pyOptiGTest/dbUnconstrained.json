@@ -1,0 +1,4269 @@
+{
+    "AHE": {
+        "funobj": [
+            "funAHE"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "AMGM": {
+        "funobj": [
+            "funAMGM"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Ackley2": {
+        "funobj": [
+            "funAckley2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Ackley3": {
+        "funobj": [
+            "funAckley3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Ackley4": {
+        "funobj": [
+            "funAckley4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Adjiman": {
+        "funobj": [
+            "funAdjiman"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Alpine1": {
+        "funobj": [
+            "funAlpine1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Alpine2": {
+        "funobj": [
+            "funAlpine2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "BartelsConn": {
+        "funobj": [
+            "funBartelsConn"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Beale": {
+        "funobj": [
+            "funBeale"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "BiggsExp2": {
+        "funobj": [
+            "funBiggsExp2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "BiggsExp3": {
+        "funobj": [
+            "funBiggsExp3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "BiggsExp4": {
+        "funobj": [
+            "funBiggsExp4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "BiggsExp5": {
+        "funobj": [
+            "funBiggsExp5"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "BiggsExp6": {
+        "funobj": [
+            "funBiggsExp6"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bird": {
+        "funobj": [
+            "funBird"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bohachevsky1": {
+        "funobj": [
+            "funBohachevsky1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bohachevsky2": {
+        "funobj": [
+            "funBohachevsky2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bohachevsky3": {
+        "funobj": [
+            "funBohachevsky3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Booth": {
+        "funobj": [
+            "funBooth"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "BoxBetts": {
+        "funobj": [
+            "funBoxBetts"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Brad": {
+        "funobj": [
+            "funBrad"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Branin1": {
+        "funobj": [
+            "funBranin1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Branin2": {
+        "funobj": [
+            "funBranin2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Brent": {
+        "funobj": [
+            "funBrent"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Brown": {
+        "funobj": [
+            "funBrown"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin01": {
+        "funobj": [
+            "funBukin01"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin02": {
+        "funobj": [
+            "funBukin02"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin03": {
+        "funobj": [
+            "funBukin03"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin04": {
+        "funobj": [
+            "funBukin04"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin05": {
+        "funobj": [
+            "funBukin05"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin06": {
+        "funobj": [
+            "funBukin06"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin07": {
+        "funobj": [
+            "funBukin07"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin08": {
+        "funobj": [
+            "funBukin08"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin09": {
+        "funobj": [
+            "funBukin09"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin10": {
+        "funobj": [
+            "funBukin10"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin11": {
+        "funobj": [
+            "funBukin11"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin12": {
+        "funobj": [
+            "funBukin12"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin13": {
+        "funobj": [
+            "funBukin13"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin14": {
+        "funobj": [
+            "funBukin14"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin15": {
+        "funobj": [
+            "funBukin15"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin16": {
+        "funobj": [
+            "funBukin16"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin17": {
+        "funobj": [
+            "funBukin17"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin18": {
+        "funobj": [
+            "funBukin18"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin19": {
+        "funobj": [
+            "funBukin19"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Bukin20": {
+        "funobj": [
+            "funBukin20"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "CamelbackSixHump": {
+        "funobj": [
+            "funCamelbackSixHump"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "CamelbackThreeHump": {
+        "funobj": [
+            "funCamelbackThreeHump"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "CarromTable": {
+        "funobj": [
+            "funCarromTable"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "ChenBird": {
+        "funobj": [
+            "funChenBird"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "ChenV": {
+        "funobj": [
+            "funChenV"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Chichinadze": {
+        "funobj": [
+            "funChichinadze"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "ChungReynolds": {
+        "funobj": [
+            "funChungReynolds"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Cigar": {
+        "funobj": [
+            "funCigar"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Cola": {
+        "funobj": [
+            "funCola"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Colville": {
+        "funobj": [
+            "funColville"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Corana": {
+        "funobj": [
+            "funCorana"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "CosineMixture": {
+        "funobj": [
+            "funCosineMixture"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "CrossInTray": {
+        "funobj": [
+            "funCrossInTray"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "CrossLegTable": {
+        "funobj": [
+            "funCrossLegTable"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "CrownedCross": {
+        "funobj": [
+            "funCrownedCross"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Csendes": {
+        "funobj": [
+            "funCsendes"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Cst": {
+        "funobj": [
+            "funCst"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Cube": {
+        "funobj": [
+            "funCube"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Custom01": {
+        "funobj": [
+            "funCustom01"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Custom02": {
+        "funobj": [
+            "funCustom02"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Custom03": {
+        "funobj": [
+            "funCustom03"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Custom04": {
+        "funobj": [
+            "funCustom04"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Custom05": {
+        "funobj": [
+            "funCustom05"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Custom06": {
+        "funobj": [
+            "funCustom06"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Custom07": {
+        "funobj": [
+            "funCustom07"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Damavandi": {
+        "funobj": [
+            "funDamavandi"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "DeVilliersGlasser1": {
+        "funobj": [
+            "funDeVilliersGlasser1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "DeVilliersGlasser2": {
+        "funobj": [
+            "funDeVilliersGlasser2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Deb1": {
+        "funobj": [
+            "funDeb1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Deb2": {
+        "funobj": [
+            "funDeb2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Deb3": {
+        "funobj": [
+            "funDeb3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Deb4": {
+        "funobj": [
+            "funDeb4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Decanomial": {
+        "funobj": [
+            "funDecanomial"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Deceptive": {
+        "funobj": [
+            "funDeceptive"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "DeckkersAarts": {
+        "funobj": [
+            "funDeckkersAarts"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "DeflectedCorrugatedSpring": {
+        "funobj": [
+            "funDeflectedCorrugatedSpring"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Dejong": {
+        "funobj": [
+            "funDejong"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Dixon": {
+        "funobj": [
+            "funDixon"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "DixonPrice": {
+        "funobj": [
+            "funDixonPrice"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Dolan": {
+        "funobj": [
+            "funDolan"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "DropWave": {
+        "funobj": [
+            "funDropWave"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "EX1": {
+        "funobj": [
+            "funEX1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Easom": {
+        "funobj": [
+            "funEasom"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "EggCrate": {
+        "funobj": [
+            "funEggCrate"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "EggHolder": {
+        "funobj": [
+            "funEggHolder"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "ElAttarVidyasogarDutta": {
+        "funobj": [
+            "funElAttarVidyasogarDutta"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Exp2": {
+        "funobj": [
+            "funExp2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Exp3": {
+        "funobj": [
+            "funExp3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Exp4": {
+        "funobj": [
+            "funExp4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Exp5": {
+        "funobj": [
+            "funExp5"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Exp6": {
+        "funobj": [
+            "funExp6"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Exponential": {
+        "funobj": [
+            "funExponential"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "FreudensteinRoth": {
+        "funobj": [
+            "funFreudensteinRoth"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Gear": {
+        "funobj": [
+            "funGear"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Giunta": {
+        "funobj": [
+            "funGiunta"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "GoldsteinPrice": {
+        "funobj": [
+            "funGoldsteinPrice"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Griewank": {
+        "funobj": [
+            "funGriewank"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "GulfResearch": {
+        "funobj": [
+            "funGulfResearch"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Hansen": {
+        "funobj": [
+            "funHansen"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Hartmann3": {
+        "funobj": [
+            "funHartmann3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Hartmann6": {
+        "funobj": [
+            "funHartmann6"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "HelicalValley": {
+        "funobj": [
+            "funHelicalValley"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Himmelblau": {
+        "funobj": [
+            "funHimmelblau"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Holzman": {
+        "funobj": [
+            "funHolzman"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Hosaki": {
+        "funobj": [
+            "funHosaki"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Infiniti": {
+        "funobj": [
+            "funInfiniti"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "JennrichSampson": {
+        "funobj": [
+            "funJennrichSampson"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Judge": {
+        "funobj": [
+            "funJudge"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Katsuura": {
+        "funobj": [
+            "funKatsuura"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Keane": {
+        "funobj": [
+            "funKeane"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Kowalik": {
+        "funobj": [
+            "funKowalik"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Langermann5": {
+        "funobj": [
+            "funLangermann5"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Langermann52": {
+        "funobj": [
+            "funLangermann52"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Leon": {
+        "funobj": [
+            "funLeon"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Levy03": {
+        "funobj": [
+            "funLevy03"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Levy05": {
+        "funobj": [
+            "funLevy05"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Levy13": {
+        "funobj": [
+            "funLevy13"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Matyas": {
+        "funobj": [
+            "funMatyas"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "McCormick": {
+        "funobj": [
+            "funMcCormick"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Michalewicz": {
+        "funobj": [
+            "funMichalewicz"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "MieleCantrell": {
+        "funobj": [
+            "funMieleCantrell"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra01": {
+        "funobj": [
+            "funMishra01"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra02": {
+        "funobj": [
+            "funMishra02"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra03": {
+        "funobj": [
+            "funMishra03"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra04": {
+        "funobj": [
+            "funMishra04"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra05": {
+        "funobj": [
+            "funMishra05"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra06": {
+        "funobj": [
+            "funMishra06"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra07": {
+        "funobj": [
+            "funMishra07"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra08": {
+        "funobj": [
+            "funMishra08"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra09": {
+        "funobj": [
+            "funMishra09"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra10": {
+        "funobj": [
+            "funMishra10"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mishra11": {
+        "funobj": [
+            "funMishra11"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Mystery": {
+        "funobj": [
+            "funMystery"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "NeedleEye": {
+        "funobj": [
+            "funNeedleEye"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "NewFunction1": {
+        "funobj": [
+            "funNewFunction1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "NewFunction2": {
+        "funobj": [
+            "funNewFunction2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "NewFunction3": {
+        "funobj": [
+            "funNewFunction3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Null": {
+        "funobj": [
+            "funNull"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "OddSquare": {
+        "funobj": [
+            "funOddSquare"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Parsopoulos": {
+        "funobj": [
+            "funParsopoulos"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Pathological": {
+        "funobj": [
+            "funPathological"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Paviani": {
+        "funobj": [
+            "funPaviani"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Peaks": {
+        "funobj": [
+            "funPeaks"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "PeaksN": {
+        "funobj": [
+            "funPeaksN"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "PenHolder": {
+        "funobj": [
+            "funPenHolder"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Penalty1": {
+        "funobj": [
+            "funPenalty1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Penalty2": {
+        "funobj": [
+            "funPenalty2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Periodic": {
+        "funobj": [
+            "funPeriodic"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Pinter": {
+        "funobj": [
+            "funPinter"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Plateau": {
+        "funobj": [
+            "funPlateau"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Powell": {
+        "funobj": [
+            "funPowell"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "PowerSum": {
+        "funobj": [
+            "funPowerSum"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Price01": {
+        "funobj": [
+            "funPrice01"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Price2": {
+        "funobj": [
+            "funPrice2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Price3": {
+        "funobj": [
+            "funPrice3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Price4": {
+        "funobj": [
+            "funPrice4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Qing": {
+        "funobj": [
+            "funQing"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Quadratic": {
+        "funobj": [
+            "funQuadratic"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Quartic": {
+        "funobj": [
+            "funQuartic"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Quintic": {
+        "funobj": [
+            "funQuintic"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "RHE": {
+        "funobj": [
+            "funRHE"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Rana": {
+        "funobj": [
+            "funRana"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Rastrigin": {
+        "funobj": [
+            "funRastrigin"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Ripple01": {
+        "funobj": [
+            "funRipple01"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Ripple25": {
+        "funobj": [
+            "funRipple25"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Rosenbrock": {
+        "funobj": [
+            "funRosenbrock"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "RosenbrockM": {
+        "funobj": [
+            "funRosenbrockM"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "RosenbrockMS": {
+        "funobj": [
+            "funRosenbrockMS"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "RotatedEllipse1": {
+        "funobj": [
+            "funRotatedEllipse1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "RotatedEllipse2": {
+        "funobj": [
+            "funRotatedEllipse2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Rump": {
+        "funobj": [
+            "funRump"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Salomon": {
+        "funobj": [
+            "funSalomon"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Sargan": {
+        "funobj": [
+            "funSargan"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schaffer1": {
+        "funobj": [
+            "funSchaffer1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schaffer2": {
+        "funobj": [
+            "funSchaffer2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schaffer3": {
+        "funobj": [
+            "funSchaffer3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schaffer4": {
+        "funobj": [
+            "funSchaffer4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schaffer6": {
+        "funobj": [
+            "funSchaffer6"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "SchmidtVetters": {
+        "funobj": [
+            "funSchmidtVetters"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel01": {
+        "funobj": [
+            "funSchwefel01"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel02": {
+        "funobj": [
+            "funSchwefel02"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel04": {
+        "funobj": [
+            "funSchwefel04"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel06": {
+        "funobj": [
+            "funSchwefel06"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel20": {
+        "funobj": [
+            "funSchwefel20"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel21": {
+        "funobj": [
+            "funSchwefel21"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel22": {
+        "funobj": [
+            "funSchwefel22"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel23": {
+        "funobj": [
+            "funSchwefel23"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel25": {
+        "funobj": [
+            "funSchwefel25"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel26": {
+        "funobj": [
+            "funSchwefel26"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Schwefel36": {
+        "funobj": [
+            "funSchwefel36"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Shekel05": {
+        "funobj": [
+            "funShekel05"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Shekel07": {
+        "funobj": [
+            "funShekel07"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Shekel10": {
+        "funobj": [
+            "funShekel10"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Shubert1": {
+        "funobj": [
+            "funShubert1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Shubert3": {
+        "funobj": [
+            "funShubert3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Shubert4": {
+        "funobj": [
+            "funShubert4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Simionescu": {
+        "funobj": [
+            "funSimionescu"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "SineEnveloppe": {
+        "funobj": [
+            "funSineEnveloppe"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Slope": {
+        "funobj": [
+            "funSlope"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Sodp": {
+        "funobj": [
+            "funSodp"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Sphere": {
+        "funobj": [
+            "funSphere"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Step": {
+        "funobj": [
+            "funStep"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Step1": {
+        "funobj": [
+            "funStep1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Step2": {
+        "funobj": [
+            "funStep2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Step3": {
+        "funobj": [
+            "funStep3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "StepInt": {
+        "funobj": [
+            "funStepInt"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Stochastic": {
+        "funobj": [
+            "funStochastic"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "StretchedV": {
+        "funobj": [
+            "funStretchedV"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "StyblinskiTang": {
+        "funobj": [
+            "funStyblinskiTang"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "SumSquare": {
+        "funobj": [
+            "funSumSquare"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Townsend": {
+        "funobj": [
+            "funTownsend"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Treccani": {
+        "funobj": [
+            "funTreccani"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Trefethen": {
+        "funobj": [
+            "funTrefethen"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Trid": {
+        "funobj": [
+            "funTrid"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Trigonometric1": {
+        "funobj": [
+            "funTrigonometric1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Trigonometric2": {
+        "funobj": [
+            "funTrigonometric2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Trigonometric3": {
+        "funobj": [
+            "funTrigonometric3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Tripod": {
+        "funobj": [
+            "funTripod"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "TubeHolder": {
+        "funobj": [
+            "funTubeHolder"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Ursem01": {
+        "funobj": [
+            "funUrsem01"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Ursem3": {
+        "funobj": [
+            "funUrsem3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Ursem4": {
+        "funobj": [
+            "funUrsem4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "UrsemWaves": {
+        "funobj": [
+            "funUrsemWaves"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "VenterSobiezcczanskiSobieski": {
+        "funobj": [
+            "funVenterSobiezcczanskiSobieski"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Vincent": {
+        "funobj": [
+            "funVincent"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Watson": {
+        "funobj": [
+            "funWatson"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Wavy": {
+        "funobj": [
+            "funWavy"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "WayburnSeader1": {
+        "funobj": [
+            "funWayburnSeader1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "WayburnSeader2": {
+        "funobj": [
+            "funWayburnSeader2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Weibull": {
+        "funobj": [
+            "funWeibull"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Weierstrass": {
+        "funobj": [
+            "funWeierstrass"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Whitley": {
+        "funobj": [
+            "funWhitley"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Wolfe": {
+        "funobj": [
+            "funWolfe"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "XinSheYang1": {
+        "funobj": [
+            "funXinSheYang1"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "XinSheYang2": {
+        "funobj": [
+            "funXinSheYang2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "XinSheYang3": {
+        "funobj": [
+            "funXinSheYang3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "XinSheYang4": {
+        "funobj": [
+            "funXinSheYang4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Xor": {
+        "funobj": [
+            "funXor"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "YaoLiu4": {
+        "funobj": [
+            "funYaoLiu4"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "YaoLiu9": {
+        "funobj": [
+            "funYaoLiu9"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Zacharov": {
+        "funobj": [
+            "funZacharov"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "ZeroSum": {
+        "funobj": [
+            "funZeroSum"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Zettl": {
+        "funobj": [
+            "funZettl"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Zimmerman": {
+        "funobj": [
+            "funZimmerman"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "Zirilli": {
+        "funobj": [
+            "funZirilli"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "Unconstrained",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    }
+}

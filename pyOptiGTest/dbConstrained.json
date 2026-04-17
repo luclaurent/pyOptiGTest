@@ -1,0 +1,144 @@
+{
+    "RosenbrockCubicLine": {
+        "funobj": [
+            "funRosenbrock"
+        ],
+        "funcons": [
+            "funCons1",
+            "funCons2"
+        ],
+        "typecons": [
+            "<=",
+            "<="
+        ],
+        "type": "Constrained",
+        "dim": 2,
+        "minFglob": 0.0,
+        "minXglob": [
+            1.0,
+            1.0
+        ],
+        "space": [
+            [
+                -1.5,
+                1.5
+            ],
+            [
+                -0.5,
+                2.5
+            ]
+        ]
+    },
+    "RosenbrockDisk": {
+        "funobj": [
+            "funRosenbrock"
+        ],
+        "funcons": [
+            "funDisk2"
+        ],
+        "typecons": [
+            "<="
+        ],
+        "type": "Constrained",
+        "dim": 2,
+        "minFglob": 0.0,
+        "minXglob": [
+            1.0,
+            1.0
+        ],
+        "space": [
+            [
+                -1.5,
+                1.5
+            ],
+            [
+                -1.5,
+                1.5
+            ]
+        ]
+    },
+    "BirdDisk": {
+        "funobj": [
+            "funBird"
+        ],
+        "funcons": [
+            "funDisk25"
+        ],
+        "typecons": [
+            "<"
+        ],
+        "type": "Constrained",
+        "dim": 2,
+        "minFglob": -106.764537,
+        "minXglob": [
+            -1.582142,
+            -3.130247
+        ],
+        "space": [
+            [
+                -10.0,
+                0.0
+            ],
+            [
+                -6.5,
+                0.0
+            ]
+        ]
+    },
+    "Townsend": {
+        "funobj": [
+            "funTownsend"
+        ],
+        "funcons": [
+            "funConsTownsend"
+        ],
+        "typecons": [
+            "<"
+        ],
+        "type": "Constrained",
+        "dim": 2,
+        "minFglob": -2.0239884,
+        "minXglob": [
+            2.0052938,
+            1.1944506
+        ],
+        "space": [
+            [
+                -2.25,
+                2.5
+            ],
+            [
+                -2.5,
+                1.75
+            ]
+        ]
+    },
+    "Simionescu": {
+        "funobj": [
+            "funSimionescu"
+        ],
+        "funcons": [
+            "funConsSimionescu"
+        ],
+        "typecons": [
+            "<="
+        ],
+        "type": "Constrained",
+        "dim": 2,
+        "minFglob": -0.072,
+        "minXglob": [
+            -0.84852813,
+            0.84852813
+        ],
+        "space": [
+            [
+                -1.25,
+                1.25
+            ],
+            [
+                -1.25,
+                1.25
+            ]
+        ]
+    }
+}

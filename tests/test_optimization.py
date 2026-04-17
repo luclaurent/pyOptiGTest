@@ -8,8 +8,8 @@ import numpy as np
 import pytest
 from scipy.optimize import minimize
 
-from pyOptiGTest.pyOptiGTest import optigtest
-
+# from pyOptiGTest.pyOptiGTest import optigtest
+from pyOptiGTest import optigtest
 
 # ---------------------------------------------------------------------------
 # Fixtures

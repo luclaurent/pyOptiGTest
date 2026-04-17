@@ -1,0 +1,831 @@
+{
+    "BinhKorn": {
+        "funobj": [
+            "funObjKornBinh1",
+            "funObjKornBinh2"
+        ],
+        "funcons": [
+            "funConsKornBinh1",
+            "funConsKornBinh2"
+        ],
+        "typecons": [
+            "<=",
+            ">="
+        ],
+        "type": "MultiObjective",
+        "dim": 2,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.0,
+                5.0
+            ],
+            [
+                0.0,
+                3.0
+            ]
+        ]
+    },
+    "ChakongHaimes": {
+        "funobj": [
+            "funObjChakongHaimes1",
+            "funObjChakongHaimes2"
+        ],
+        "funcons": [
+            "funConsChakongHaimes1",
+            "funConsChakongHaimes2"
+        ],
+        "typecons": [
+            "<=",
+            "<="
+        ],
+        "type": "MultiObjective",
+        "dim": 2,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -20.0,
+                20.0
+            ],
+            [
+                -20.0,
+                20.0
+            ]
+        ]
+    },
+    "FonsecaFleming": {
+        "funobj": [
+            "funObjFonsecaFleming1",
+            "funObjFonsecaFleming2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": "inf",
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -4.0,
+                4.0
+            ]
+        ]
+    },
+    "TestFun4": {
+        "funobj": [
+            "funObjTestFun41",
+            "funObjTestFun42"
+        ],
+        "funcons": [
+            "funConsTestFun41",
+            "funConsTestFun42",
+            "funConsTestFun43"
+        ],
+        "typecons": [
+            ">=",
+            ">=",
+            ">="
+        ],
+        "type": "MultiObjective",
+        "dim": 2,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.1,
+                1.0
+            ],
+            [
+                -1.0,
+                1.0
+            ]
+        ]
+    },
+    "Kursawe": {
+        "funobj": [
+            "funObjKursawe1",
+            "funObjKursawe2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 3,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "MultiSchaffer1": {
+        "funobj": [
+            "funObjMultiSchaffer11",
+            "funObjMultiSchaffer12"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 1,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -10.0,
+                10.0
+            ]
+        ]
+    },
+    "MultiSchaffer2": {
+        "funobj": [
+            "funObjMultiSchaffer21",
+            "funObjMultiSchaffer22"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 1,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -5.0,
+                10.0
+            ]
+        ]
+    },
+    "Poloni": {
+        "funobj": [
+            "funObjPoloni1",
+            "funObjPoloni2"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 2,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -3.141592653589793,
+                3.141592653589793
+            ],
+            [
+                -3.141592653589793,
+                3.141592653589793
+            ]
+        ]
+    },
+    "ZDT1": {
+        "funobj": [
+            "funObjZDT11",
+            "funObjZDT12"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 30,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ]
+        ]
+    },
+    "ZDT2": {
+        "funobj": [
+            "funObjZDT21",
+            "funObjZDT22"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 30,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ]
+        ]
+    },
+    "ZDT3": {
+        "funobj": [
+            "funObjZDT31",
+            "funObjZDT32"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 30,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ]
+        ]
+    },
+    "ZDT4": {
+        "funobj": [
+            "funObjZDT41",
+            "funObjZDT42"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 10,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.0,
+                1.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ],
+            [
+                -5.0,
+                5.0
+            ]
+        ]
+    },
+    "ZDT6": {
+        "funobj": [
+            "funObjZDT61",
+            "funObjZDT62"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 10,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ]
+        ]
+    },
+    "OsyczkaKundu": {
+        "funobj": [
+            "funObjOsyczkaKundu1",
+            "funObjOsyczkaKundu2"
+        ],
+        "funcons": [
+            "funConsOsyczkaKundu1",
+            "funConsOsyczkaKundu2",
+            "funConsOsyczkaKundu3",
+            "funConsOsyczkaKundu4",
+            "funConsOsyczkaKundu5",
+            "funConsOsyczkaKundu6"
+        ],
+        "typecons": [
+            ">=",
+            ">=",
+            ">=",
+            ">=",
+            ">=",
+            ">="
+        ],
+        "type": "MultiObjective",
+        "dim": 6,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.0,
+                10.0
+            ],
+            [
+                0.0,
+                10.0
+            ],
+            [
+                1.0,
+                5.0
+            ],
+            [
+                0.0,
+                6.0
+            ],
+            [
+                1.0,
+                5.0
+            ],
+            [
+                0.0,
+                10.0
+            ]
+        ]
+    },
+    "CTP1": {
+        "funobj": [
+            "funObjCTP11",
+            "funObjCTP12"
+        ],
+        "funcons": [
+            "funConsCTP11",
+            "funConsCTP12"
+        ],
+        "typecons": [
+            ">=",
+            ">="
+        ],
+        "type": "MultiObjective",
+        "dim": 2,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.0,
+                1.0
+            ],
+            [
+                0.0,
+                1.0
+            ]
+        ]
+    },
+    "ConstrEx": {
+        "funobj": [
+            "funObjConstrEx1",
+            "funObjConstrEx2"
+        ],
+        "funcons": [
+            "funConsConstrEx1",
+            "funConsConstrEx2"
+        ],
+        "typecons": [
+            ">=",
+            ">="
+        ],
+        "type": "MultiObjective",
+        "dim": 2,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                0.1,
+                1.0
+            ],
+            [
+                0.0,
+                5.0
+            ]
+        ]
+    },
+    "Viennet": {
+        "funobj": [
+            "funObjViennet1",
+            "funObjViennet2",
+            "funObjViennet3"
+        ],
+        "funcons": null,
+        "typecons": null,
+        "type": "MultiObjective",
+        "dim": 2,
+        "minFglob": null,
+        "minXglob": null,
+        "space": [
+            [
+                -3.0,
+                3.0
+            ],
+            [
+                -3.0,
+                3.0
+            ]
+        ]
+    }
+}

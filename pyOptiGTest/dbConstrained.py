@@ -11,7 +11,33 @@
     https://github.com/luclaurent/optigtest/
 """
 
+import json
+import pathlib
+
 import numpy as np
+
+_JSON_FILE = pathlib.Path(__file__).parent / "dbConstrained.json"
+
+
+def _convert_entry(entry):
+    """Convert a JSON entry to the expected Python types (numpy arrays, etc.)."""
+    dim = entry.get("dim")
+    if dim == "inf":
+        entry["dim"] = np.inf
+    elif isinstance(dim, (int, float)):
+        entry["dim"] = int(dim)
+    for key in ("minFglob",):
+        if entry.get(key) is None:
+            entry[key] = np.nan
+    for key in ("minXglob",):
+        v = entry.get(key)
+        if v is None:
+            entry[key] = np.nan
+        elif isinstance(v, list):
+            entry[key] = np.asarray(v)
+    if entry.get("space") is not None:
+        entry["space"] = np.asarray(entry["space"])
+    return entry
 
 
 def listPb():
@@ -27,60 +53,9 @@ def listPb():
         - minXglob: known global minimizer (numpy array or np.nan)
         - space: design space bounds as numpy array, shape (dim, 2)
     """
-
-    pb = {
-        'RosenbrockCubicLine': {
-            'funobj': ['funRosenbrock'],
-            'funcons': ['funCons1', 'funCons2'],
-            'typecons': ['<=', '<='],
-            'type': 'Constrained',
-            'dim': 2,
-            'minFglob': 0.0,
-            'minXglob': np.array([1.0, 1.0]),
-            'space': np.array([[-1.5, 1.5], [-0.5, 2.5]]),
-        },
-        'RosenbrockDisk': {
-            'funobj': ['funRosenbrock'],
-            'funcons': ['funDisk2'],
-            'typecons': ['<='],
-            'type': 'Constrained',
-            'dim': 2,
-            'minFglob': 0.0,
-            'minXglob': np.array([1.0, 1.0]),
-            'space': np.array([[-1.5, 1.5], [-1.5, 1.5]]),
-        },
-        'BirdDisk': {
-            'funobj': ['funBird'],
-            'funcons': ['funDisk25'],
-            'typecons': ['<'],
-            'type': 'Constrained',
-            'dim': 2,
-            'minFglob': -106.764537,
-            'minXglob': np.array([-1.582142, -3.130247]),
-            'space': np.array([[-10.0, 0.0], [-6.5, 0.0]]),
-        },
-        'Townsend': {
-            'funobj': ['funTownsend'],
-            'funcons': ['funConsTownsend'],
-            'typecons': ['<'],
-            'type': 'Constrained',
-            'dim': 2,
-            'minFglob': -2.0239884,
-            'minXglob': np.array([2.0052938, 1.1944506]),
-            'space': np.array([[-2.25, 2.5], [-2.5, 1.75]]),
-        },
-        'Simionescu': {
-            'funobj': ['funSimionescu'],
-            'funcons': ['funConsSimionescu'],
-            'typecons': ['<='],
-            'type': 'Constrained',
-            'dim': 2,
-            'minFglob': -0.072,
-            'minXglob': np.array([-0.84852813, 0.84852813]),
-            'space': np.array([[-1.25, 1.25], [-1.25, 1.25]]),
-        },
-    }
-    return pb
+    with open(_JSON_FILE, "r") as f:
+        raw = json.load(f)
+    return {name: _convert_entry(data) for name, data in raw.items()}
 
 
 def loadPb(pbName=None):
