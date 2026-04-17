@@ -1,63 +1,81 @@
 """
-    This file is part of pyOptiGTest module. It contains the declarations 
-    of all test problems.
+    pyOptiGTest - Database of all optimization test problems.
+
+    Aggregates unconstrained, constrained, and multi-objective problems
+    into a single unified interface.
+
+    This file is part of pyOptiGTest.
 
     MIT License
-
     Copyright (c) 2020 Luc LAURENT
+    luc.laurent@lecnam.net
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
+    Sources available at:
+    https://github.com/luclaurent/optigtest/
 """
 
-from . import dbFunctions as dbF
+from . import dbUnconstrained
+from . import dbConstrained
+from . import dbMultiObj
+
 import numpy as np
 
 
-# load unconstrained problem from name
-def loadPb(pbName = None,dim = 0):
-    #
+def loadPb(pbName=None, dim=0):
+    """Load problem(s) by name from all categories.
+
+    Args:
+        pbName: Problem name string. If None, return all problems.
+        dim: Dimension for unconstrained problems (default: 0).
+
+    Returns:
+        dict: Single problem dict if pbName given, else all problems.
+    """
+
     allPb = listPb(dim)
-    out = dict()
-    #
     if pbName:
-        if pbName in allPb.keys():
-            out = allPb[pbName]
+        return allPb.get(pbName, {})
+    return allPb
+
+
+def listPb(dim=0):
+    """Return a dictionary of all optimization test problems.
+
+    Merges unconstrained, constrained, and multi-objective problems.
+
+    Args:
+        dim: Dimension for unconstrained problems (default: 0).
+
+    Returns:
+        dict: All problems keyed by name.
+    """
+
+    pb = {}
+    pb.update(dbUnconstrained.listPb(dim))
+    pb.update(dbConstrained.listPb())
+    pb.update(dbMultiObj.listPb())
+    return pb
+
+
+def listPbByType(pbType=None, dim=0):
+    """Return problems filtered by type.
+
+    Args:
+        pbType: One of 'Unconstrained', 'Constrained', 'MultiObjective', or None for all.
+        dim: Dimension for unconstrained problems.
+
+    Returns:
+        dict: Filtered problems.
+    """
+
+    if pbType == 'Unconstrained':
+        return dbUnconstrained.listPb(dim)
+    elif pbType == 'Constrained':
+        return dbConstrained.listPb()
+    elif pbType == 'MultiObjective':
+        return dbMultiObj.listPb()
     else:
-        out=allPb
-    #
-    return out
-
-
-#all problems
-def listPb(dim = 0):
-    pb = dict()
-    pb = {
-        'Ackley1':{
-            'funobj':['Ackley1'],
-            'funcons':None,
-            'typecons':None,
-            'type':'Unconstrained',
-            'dim':np.inf,
-            'minFglob':0,
-            'minXglob':np.zeros(dim),
-            'space':np.ndarray([-35,35])
-        }}
+        return listPb(dim)
 
 
 

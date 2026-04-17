@@ -1,0 +1,1 @@
+# Legacy stub replaced — see test_package.py for comprehensive tests.

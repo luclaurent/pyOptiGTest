@@ -41,12 +41,12 @@ def funAckley1(X,grad=False):
     d=np.exp(1)
 
     #number of variables
-    nbvar=X.shape[2]
+    nbvar=X.shape[1]
 
     #responses and derivatives
-    normP=np.sqrt(np.sum(X^2,3))
+    normP=np.sqrt(np.sum(X**2,1))
     ex1=np.exp(-b*normP/np.sqrt(nbvar))
-    sco=np.sum(np.cos(c*X),3)
+    sco=np.sum(np.cos(c*X),1)
     ex2=np.exp(1/nbvar*sco)
     p=-a*ex1-ex2+a+d
 

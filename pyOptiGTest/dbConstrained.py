@@ -1,44 +1,99 @@
 """
-    This file is part of pyOptiGTest module. It contains the declarations 
-    of all test unconstrained problems.
+    pyOptiGTest - Database of constrained optimization test problems.
+
+    This file is part of pyOptiGTest.
 
     MIT License
-
     Copyright (c) 2020 Luc LAURENT
+    luc.laurent@lecnam.net
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
+    Sources available at:
+    https://github.com/luclaurent/optigtest/
 """
 
-import dbFunctions as dbF
 import numpy as np
 
-#all unconstrained problems
-def unPb(dim=0):
-    pb = dict()
+
+def listPb():
+    """Return a dictionary of all constrained optimization test problems.
+
+    Each entry maps a problem name to a dict with keys:
+        - funobj: list of objective function names
+        - funcons: list of constraint function names
+        - typecons: list of constraint types ('<=', '<', '>=')
+        - type: 'Constrained'
+        - dim: number of design variables (int or np.inf)
+        - minFglob: known global minimum value (float or np.nan)
+        - minXglob: known global minimizer (numpy array or np.nan)
+        - space: design space bounds as numpy array, shape (dim, 2)
+    """
+
     pb = {
-        'Ackley1':{
-            'dim':np.inf,
-            'minFglob':0,
-            'minXglob':np.zeros(dim),
-            'space':np.ndarray([-35,35])
-        }}
+        'RosenbrockCubicLine': {
+            'funobj': ['funRosenbrock'],
+            'funcons': ['funCons1', 'funCons2'],
+            'typecons': ['<=', '<='],
+            'type': 'Constrained',
+            'dim': 2,
+            'minFglob': 0.0,
+            'minXglob': np.array([1.0, 1.0]),
+            'space': np.array([[-1.5, 1.5], [-0.5, 2.5]]),
+        },
+        'RosenbrockDisk': {
+            'funobj': ['funRosenbrock'],
+            'funcons': ['funDisk2'],
+            'typecons': ['<='],
+            'type': 'Constrained',
+            'dim': 2,
+            'minFglob': 0.0,
+            'minXglob': np.array([1.0, 1.0]),
+            'space': np.array([[-1.5, 1.5], [-1.5, 1.5]]),
+        },
+        'BirdDisk': {
+            'funobj': ['funBird'],
+            'funcons': ['funDisk25'],
+            'typecons': ['<'],
+            'type': 'Constrained',
+            'dim': 2,
+            'minFglob': -106.764537,
+            'minXglob': np.array([-1.582142, -3.130247]),
+            'space': np.array([[-10.0, 0.0], [-6.5, 0.0]]),
+        },
+        'Townsend': {
+            'funobj': ['funTownsend'],
+            'funcons': ['funConsTownsend'],
+            'typecons': ['<'],
+            'type': 'Constrained',
+            'dim': 2,
+            'minFglob': -2.0239884,
+            'minXglob': np.array([2.0052938, 1.1944506]),
+            'space': np.array([[-2.25, 2.5], [-2.5, 1.75]]),
+        },
+        'Simionescu': {
+            'funobj': ['funSimionescu'],
+            'funcons': ['funConsSimionescu'],
+            'typecons': ['<='],
+            'type': 'Constrained',
+            'dim': 2,
+            'minFglob': -0.072,
+            'minXglob': np.array([-0.84852813, 0.84852813]),
+            'space': np.array([[-1.25, 1.25], [-1.25, 1.25]]),
+        },
+    }
+    return pb
 
 
-# load unconstrained problem from name
-def loadPb():
+def loadPb(pbName=None):
+    """Load constrained problem(s) by name.
+
+    Args:
+        pbName: Problem name string. If None, return all problems.
+
+    Returns:
+        dict: Single problem dict if pbName given, else all problems.
+    """
+
+    allPb = listPb()
+    if pbName:
+        return allPb.get(pbName, {})
+    return allPb

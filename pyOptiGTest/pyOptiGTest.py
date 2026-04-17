@@ -1,204 +1,358 @@
+"""
+    pyOptiGTest - OptiGTest class for managing optimization test problems.
+
+    This file is part of pyOptiGTest.
+
+    MIT License
+    Copyright (c) 2020 Luc LAURENT
+    luc.laurent@lecnam.net
+
+    Sources available at:
+    https://github.com/luclaurent/optigtest/
+"""
+
 import logging
+import importlib
+import numpy as np
 import sys
-from datetime import datetime
+
 from . import dbProblems as dbP
 
-class optigtest:
+textSpacer = '=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#='
+smalltextSpacer = '------------------------'
 
-    def __init__(self,namePb=None,X=None,dim=None):
-        """ constructor of the class """
-        #initialize object
+
+class optigtest:
+    """Main class for managing and evaluating optimization test problems.
+
+    Supports unconstrained, constrained, and multi-objective problems.
+
+    Args:
+        namePb: Name of the test problem (optional).
+        X: Sample points to evaluate, shape (N, dim) (optional).
+        dim: Problem dimension (optional, required for variable-dim problems).
+    """
+
+    def __init__(self, namePb=None, X=None, dim=None):
+        # initialize object
         self.initObj()
-        #initialize logging
+        # initialize logging
         logging.basicConfig(
-            handlers=[
-                logging.StreamHandler(sys.stdout)
-                ],
+            handlers=[logging.StreamHandler(sys.stdout)],
             format='%(asctime)s %(levelname)-8s %(message)s',
             level=logging.INFO,
-            datefmt='%Y-%m-%d %H:%M:%S')
-            #
-        #start creating the object
+            datefmt='%Y-%m-%d %H:%M:%S',
+        )
         logging.info('###############################')
         logging.info('### Create optiGTest object ###')
         logging.info('###############################')
-        #if no input create an empty object
+
         if namePb:
-            self.setPbName()
+            self.setPbName(namePb)
         if dim:
-            #apply requested dim
             self.setDim(dim)
-        if namePb and not X:
-            #show details
+        if namePb and X is None:
             self.showDetails()
-        if X:
-            #prepare sample points
+        if X is not None:
             self.prepX(X)
-            #evaluate all functions
             self.evalAll()
-        
 
     def initObj(self):
-        """ initilization of the structure of the object """
-        self.namePb = ''              # chosen problem
-        self.typePb = ''              # kind of problems ('Un'=unconstrained, 'Cons'= constrained, 'Mult'=multiobjective)
-        #
-        self.dim = 0                  # dimension of the problem (number of design variables)
-        self.Xeval                   # set of parameters used for evaluating the function
-        #
-        # nSCheck=5;                 # number of sample points used for checking the function
-        # forceDisplayGrad=false;    # flag to force display of gradients
-        # paranoidCheck=false;       # strict check of function
-        # defaultCheck=false;        # check by default after loading
-        # FDtype='CD8';              # finite difference scheme
-        # FDstep=1e-7;               # finite difference stepsize
-        #
-        self.populate()              # initialize fields for the active case
-        self.initEval()              # initialize storage for evaluations
-        #
-        return True
+        """Initialize the structure of the object."""
+        self.namePb = ''
+        self.typePb = ''
+        self.dim = 0
+        self.Xeval = None
+        self.populate()
+        self.initEval()
 
     def initEval(self):
-        """ specific initialization of storage elements for evaluations """
-        self.objEval = []           # evaluations of the objective functions
-        self.consEval = []          # evaluations of the constraint functions
+        """Initialize storage for evaluations."""
+        self.objEval = []
+        self.consEval = []
+        self.objGradEval = []
+        self.consGradEval = []
 
+    def populate(self, dictPb=None):
+        """Populate object attributes from a problem dictionary."""
+        self.typePb = ''
+        self.funObj = []
+        self.funCons = []
+        self.typeCons = []
+        self.designSpace = np.empty((0, 2))
+        self.dimAvailable = 0
+        self.locMinZ = []
+        self.locMinX = []
+        self.globMinZ = np.nan
+        self.globMinX = np.nan
 
-    def loadData(self,pbName=None,dim=None):
-        """ load data of the selected test case """
-        self.setDim(dim)
-        #load data of the case from db
-        dataPb = dbP.loadPb(pbName,self.dim)
-        #depending on the cases
+        if dictPb is not None:
+            self.funObj = dictPb.get('funobj', []) or []
+            self.funCons = dictPb.get('funcons', []) or []
+            self.typePb = dictPb.get('type', '')
+            self.typeCons = dictPb.get('typecons', []) or []
+            self.dimAvailable = dictPb.get('dim', 0)
+            if 'space' in dictPb:
+                self.designSpace = np.atleast_2d(dictPb['space'])
+            if 'minFglob' in dictPb:
+                self.globMinZ = dictPb['minFglob']
+            if 'minXglob' in dictPb:
+                self.globMinX = dictPb['minXglob']
+            if 'minFloc' in dictPb:
+                self.locMinZ = dictPb['minFloc']
+            if 'minXloc' in dictPb:
+                self.locMinX = dictPb['minXloc']
+
+    def loadData(self, pbName=None, dim=None):
+        """Load data of the selected test case."""
+        dataPb = dbP.loadPb(pbName, self.dim)
+        self.populate()
+
         if pbName:
-            #if the load data dictionay is empty
             if len(dataPb) == 0:
-                logging.warning('Problem %s not available'%pbName)
-                #show available problems
+                logging.error('Problem {} not available'.format(pbName))
                 dataPb = dbP.loadPb()
                 self.showPbs(dataPb)
             else:
-                self.populate(dataPb)
+                currentDim = dim if dim is not None else self.dim
+                status = self.dimensionOk(currentDim, dataPb['dim'])
+                if status != -1:
+                    self.populate(dataPb)
+                else:
+                    logging.error('Dimension {} not available for problem {}'.format(
+                        currentDim, pbName))
         else:
-            #show available problems
             self.showPbs(dataPb)
-        
-    def populate(self,dictPb = None):
-        """ populate items of the object """
-        # create empty fields
-        self.typePb = ''              # kind of problems ('Un'=unconstrained, 'Cons'= constrained, 'Mult'=multiobjective)
-        #
-        self.funObj =[]                     # objective function
-        self.funCons = []                   # list of constraint functions
-        self.typeCons = []                  # list of type of constraints (<, >, <=, >=, =)
-        self.designSpace = []               # lower and upper bounds
-        self.dimAvailable = 0               # available dimensions for the chosen problem
-        self.locMinZ = []                   # list of local minima (responses)
-        self.locMinX = []                   # list of local minima (associated parameters)
-        self.globMinZ = []                  # list of global minima (responses)
-        self.globMinX = []                  # list of global minima (associated parameters)
-        #load data
-        if dictPb is not None:
-            if 'funobj' in dictPb.keys():
-                self.funObj = dictPb['funobj']
-            if 'funcons' in dictPb.keys():
-                self.funCons = dictPb['funcons']
-            if 'dim' in dictPb.keys():
-                self.dimAvailable = dictPb['dim']
-            if 'type' in dictPb.keys():
-                self.typePb = dictPb['type']
-            if 'typecons' in dictPb.keys():
-                self.typeCons = dictPb['typecons']
-            if 'space' in dictPb.keys():
-                self.designSpace = dictPb['space']
-            if 'minFglob' in dictPb.keys():
-                self.globMinZ = dictPb['minFglob']
-            if 'minXglob' in dictPb.keys():
-                self.globMinX = dictPb['minXglob']
-            if 'minFloc' in dictPb.keys():
-                self.locMinZ = dictPb['minFloc']
-            if 'minXloc' in dictPb.keys():
-                self.locMinX = dictPb['minXloc']
+        return dataPb
 
+    # ---- Accessors ----
 
-    def prepX(self,X=None):
-        pass
+    def listPb(self, pbType=None):
+        """Return the list of all available problems, optionally filtered by type."""
+        allPb = dbP.listPbByType(pbType, self.dim)
+        for pbname in sorted(allPb.keys()):
+            logging.info('{} ({})'.format(pbname, allPb[pbname].get('type', '')))
+        return allPb
+
+    def prepX(self, X=None):
+        """Pack points into (N, dim) array."""
+        if X is not None:
+            self.Xeval = np.atleast_2d(X)
+        return self.Xeval
+
+    def getDesignSpace(self):
+        """Return the design space, tiled if needed for the current dimension."""
+        dS = self.designSpace
+        if dS.shape[0] == 1 and self.dim > 1:
+            dS = np.tile(dS, (self.dim, 1))
+        return dS
 
     def getXmax(self):
-        pass
+        return self.getDesignSpace()[:, 1]
+
     def getXmin(self):
-        pass
+        return self.getDesignSpace()[:, 0]
+
     def getGlobZmin(self):
-        pass
+        return self.globMinZ
+
     def getGlobXmin(self):
-        pass
+        return self.globMinX
+
     def getTypePb(self):
-        pass
+        return self.typePb
+
     def getNbObj(self):
-        pass
+        return len(self.funObj) if isinstance(self.funObj, list) else 1
+
     def getNbCons(self):
-        pass
-    
-    def setPbName(self,pbName=None):
-        """ declare the problem and load data """
-        #load data and check if it is ok
-        if self.loadData(pbName):
-            self.pbName = pbName
+        if self.funCons is None:
+            return 0
+        return len(self.funCons) if isinstance(self.funCons, list) else 1
 
-    def setDim(self,dim=None):
-        pass
-    def evalAll(self,X=None):
-        pass
-    def evalObj(self,X=None):
-        pass
-    def evalCons(self,X=None):
-        pass
-    def checkCons(self,X=None,Z=None):
-        pass
-    def checkMin(self,X=None,Z=None):
-        pass
-    def checkPb(self,pbName=None):
-        pass
-    def checkObj(self,pbName=None):
-        pass
-    def checkGrad(self,pbName=None):
-        pass
-    def checkAllPb(self):
-        pass
-    def showDetails(self):
-        pass
+    @staticmethod
+    def dimensionOk(dimToCheck, dimAvailable):
+        """Check if the chosen dimension is valid.
 
-    def showPbs(self,dictPb=None):
-        """ Show the listed problems in dictPb """
-        if dictPb is not None:
-            #find unconstrained, constrained, multi-objective problems
-            dictUn = [x for x in dictPb if x['type'] == 'Un']
-            dictCons = [x for x in dictPb if x['type'] == 'Cons']
-            dictMulti = [x for x in dictPb if x['type'] == 'Multi']
-            nbPb = len(dictUn)+len(dictCons)+len(dictMulti)
-            #
-            logging.info('=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=')
-            if nbPb == 0:
-                logging.info('No available test problems')
-            else:
-                logging.info('%i available test problems'%nbPb)
-                if len(dictUn)>0:
-                    logging.info('------------------------')
-                    for x in dictUn.keys():
-                        logging.info('Unconstrained: %s'%x)
-                    logging.info('------------------------')
-                if len(dictCons)>0:
-                    logging.info('------------------------')
-                    for x in dictCons.keys():
-                        logging.info('Constrained: %s (nb constraints: %i)'
-                                        %(x,len(dictCons[x]['funcons'])))
-                    logging.info('------------------------')
-                if len(dictMulti)>0:
-                    logging.info('------------------------')
-                    for x in dictMulti.keys():
-                        logging.info('Constrained: %s (nb objective/constraints: %i/%i)'
-                                        %(x,len(dictMulti[x]['funobj']),len(dictMulti[x]['funcons'])))
-                    logging.info('------------------------')
-            logging.info('=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=')
+        Returns:
+            -1: bad dimension
+             1: dimension is allowed
+             n (n>0): no selected dimension, only one is available
+        """
+        status = -1
+        if dimAvailable == np.inf:
+            status = 1
+        else:
+            dimAvailable = np.atleast_1d(dimAvailable)
+            if dimToCheck in dimAvailable:
+                status = 1
+            elif len(dimAvailable) == 1:
+                status = int(dimAvailable[0])
+        return status
 
-            
+    def setPbName(self, pbName=None):
+        """Declare the problem and load data."""
+        if pbName and self.loadData(pbName):
+            self.namePb = pbName
+
+    def setDim(self, dim=None):
+        """Set the problem dimension and reload data."""
+        if dim is not None:
+            self.dim = dim
+            self.loadData(pbName=self.namePb)
+
+    # ---- Function loading ----
+
+    @staticmethod
+    def _load_function(funName):
+        """Load a function by name from the functions subpackage."""
+        mod = importlib.import_module('pyOptiGTest.functions.{}'.format(funName))
+        return getattr(mod, funName)
+
+    # ---- Evaluation ----
+
+    def evalAll(self, X=None):
+        """Evaluate all objective and constraint functions."""
+        self.objEval = self.evalObj(X)
+        if self.funCons:
+            self.consEval = self.evalCons(X)
+
+    def evalObj(self, X=None, grad=False, num=None):
+        """Evaluate objective function(s).
+
+        Args:
+            X: Sample points, shape (N, dim). If None, use self.Xeval.
+            grad: Whether to also compute gradients.
+            num: List of objective indices to evaluate (default: all).
+
+        Returns:
+            list or single result: Function evaluations (and gradients if requested).
+        """
+        Xrun = self.Xeval
+        if X is not None:
+            Xrun = self.prepX(X)
+
+        numOK = list(range(len(self.funObj)))
+        if num is not None:
+            numOK = list(np.atleast_1d(num))
+
+        results = []
+        for iF in numOK:
+            fn = self._load_function(self.funObj[iF])
+            results.append(fn(Xrun, grad=grad))
+
+        if len(numOK) == 1:
+            return results[0]
+        return results
+
+    def evalCons(self, X=None, grad=False, num=None):
+        """Evaluate constraint function(s).
+
+        Args:
+            X: Sample points, shape (N, dim). If None, use self.Xeval.
+            grad: Whether to also compute gradients.
+            num: List of constraint indices to evaluate (default: all).
+
+        Returns:
+            list or single result: Constraint evaluations.
+        """
+        if not self.funCons:
+            return []
+
+        Xrun = self.Xeval
+        if X is not None:
+            Xrun = self.prepX(X)
+
+        numOK = list(range(len(self.funCons)))
+        if num is not None:
+            numOK = list(np.atleast_1d(num))
+
+        results = []
+        for iC in numOK:
+            fn = self._load_function(self.funCons[iC])
+            results.append(fn(Xrun, grad=grad))
+
+        if len(numOK) == 1:
+            return results[0]
+        return results
+
+    def checkCons(self, X=None, Z=None):
+        """Check constraint feasibility.
+
+        Returns:
+            numpy array of booleans, True if all constraints are satisfied.
+        """
+        if not self.funCons:
+            return None
+
+        if Z is None:
+            Z = self.evalCons(X)
+
+        if not isinstance(Z, list):
+            Z = [Z]
+
+        feasible = np.ones(Z[0].shape[0], dtype=bool)
+        for iC, (z, tcons) in enumerate(zip(Z, self.typeCons)):
+            if tcons == '<=':
+                feasible &= (z.flatten() <= 0)
+            elif tcons == '<':
+                feasible &= (z.flatten() < 0)
+            elif tcons == '>=':
+                feasible &= (z.flatten() >= 0)
+            elif tcons == '>':
+                feasible &= (z.flatten() > 0)
+            elif tcons == '=':
+                feasible &= np.isclose(z.flatten(), 0)
+        return feasible
+
+    # ---- Display ----
+
+    def showDetails(self, verbose=True):
+        """Show details of the current problem."""
+        if verbose:
+            logging.info(textSpacer)
+        logging.info('Problem: {}'.format(self.namePb))
+        logging.info('Type: {}'.format(self.typePb))
+        logging.info('Dimension: {}'.format(self.dimAvailable))
+        logging.info('Nb objectives: {}'.format(self.getNbObj()))
+        logging.info('Nb constraints: {}'.format(self.getNbCons()))
+        if not np.all(np.isnan(np.atleast_1d(self.globMinZ))):
+            logging.info('Global minimum: {}'.format(self.globMinZ))
+        if verbose:
+            logging.info(textSpacer)
+
+    def showPbs(self, dictPb=None):
+        """Show available problems grouped by type."""
+        if dictPb is None:
+            return
+
+        dictUn = {k: v for k, v in dictPb.items() if v.get('type') == 'Unconstrained'}
+        dictCons = {k: v for k, v in dictPb.items() if v.get('type') == 'Constrained'}
+        dictMulti = {k: v for k, v in dictPb.items() if v.get('type') == 'MultiObjective'}
+        nbPb = len(dictUn) + len(dictCons) + len(dictMulti)
+
+        logging.info(textSpacer)
+        if nbPb == 0:
+            logging.info('No available test problems')
+        else:
+            logging.info('{} available test problems'.format(nbPb))
+            if dictUn:
+                logging.info(smalltextSpacer)
+                logging.info('Unconstrained ({})'.format(len(dictUn)))
+                for x in sorted(dictUn.keys()):
+                    logging.info('  {}'.format(x))
+            if dictCons:
+                logging.info(smalltextSpacer)
+                logging.info('Constrained ({})'.format(len(dictCons)))
+                for x in sorted(dictCons.keys()):
+                    nb_cons = len(dictCons[x].get('funcons', []) or [])
+                    logging.info('  {} (constraints: {})'.format(x, nb_cons))
+            if dictMulti:
+                logging.info(smalltextSpacer)
+                logging.info('Multi-objective ({})'.format(len(dictMulti)))
+                for x in sorted(dictMulti.keys()):
+                    nb_obj = len(dictMulti[x].get('funobj', []) or [])
+                    nb_cons = len(dictMulti[x].get('funcons', []) or [])
+                    logging.info('  {} (objectives: {}, constraints: {})'.format(
+                        x, nb_obj, nb_cons))
+        logging.info(textSpacer)
