@@ -206,8 +206,13 @@ class optigtest:
     @staticmethod
     def _load_function(funName):
         """Load a function by name from the functions subpackage."""
-        mod = importlib.import_module('pyOptiGTest.functions.{}'.format(funName))
-        return getattr(mod, funName)
+        from pyOptiGTest.base import TestFunction
+        try:
+            return TestFunction.from_name(funName)
+        except (AttributeError, TypeError):
+            # Fallback for plain-function modules (no class)
+            mod = importlib.import_module('pyOptiGTest.functions.{}'.format(funName))
+            return getattr(mod, funName)
 
     # ---- Evaluation ----
 
