@@ -64,7 +64,7 @@ jobs:
           twine check dist/*
 
       - name: Sign distributions with Sigstore
-        uses: sigstore/gh-action-sigstore-python@v2
+        uses: sigstore/gh-action-sigstore-python@v3.3.0
         with:
           inputs: |
             ./dist/*.tar.gz
