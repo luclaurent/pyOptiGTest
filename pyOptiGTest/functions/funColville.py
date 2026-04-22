@@ -22,7 +22,7 @@ class FunColville(TestFunction):
         Colville function
         L. LAURENT -- 16/09/2011 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2,x3,x4)=0 for (x1,x2,x3,x4)=(1,1,1,1)
         Design space: -10<xi<10

@@ -22,7 +22,7 @@ class FunMcCormick(TestFunction):
         McCormick's function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2)=-1.9133 for (x1,x2)=(?0.547,?1.547)
         Design space: -1.5<x1<4 & -3<x2<3

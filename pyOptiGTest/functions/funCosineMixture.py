@@ -21,7 +21,7 @@ class FunCosineMixture(TestFunction):
         """
         L. LAURENT -- 04/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         numerous local minima
         1 global minimum : x=(0,0,...,0) >> f(x)=0

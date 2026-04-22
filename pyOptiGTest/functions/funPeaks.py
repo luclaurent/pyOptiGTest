@@ -22,7 +22,7 @@ class FunPeaks(TestFunction):
         Peaks function
         L. LAURENT -- 12/05/2010 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         """
         #responses and derivatives

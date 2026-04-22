@@ -22,7 +22,7 @@ class FunChenBird(TestFunction):
         Chen Bird's function
         L. LAURENT -- 04/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         2 global minima
         f(x1,x2)=-2000 for (x1,x2)={(0.5,0.5),(-0.5,-0.5)}

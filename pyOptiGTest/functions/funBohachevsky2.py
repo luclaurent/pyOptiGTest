@@ -22,7 +22,7 @@ class FunBohachevsky2(TestFunction):
         Bohachevsky2 function
         L. LAURENT -- 16/09/2011 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum: f(x1,x2)=0 pour (x1,x2)=(0,0)
         Design space: -100<x1<100, -100<x2<100

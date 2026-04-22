@@ -11,17 +11,19 @@
     https://github.com/luclaurent/optigtest/
 """
 
+
 import json
 import pathlib
+from typing import Any
 
 import numpy as np
 
-_JSON_FILE = pathlib.Path(__file__).parent / "dbConstrained.json"
+_JSON_FILE: pathlib.Path = pathlib.Path(__file__).parent / "dbConstrained.json"
 
 
-def _convert_entry(entry):
+def _convert_entry(entry: dict[str, Any]) -> dict[str, Any]:
     """Convert a JSON entry to the expected Python types (numpy arrays, etc.)."""
-    dim = entry.get("dim")
+    dim: Any = entry.get("dim")
     if dim == "inf":
         entry["dim"] = np.inf
     elif isinstance(dim, (int, float)):
@@ -30,7 +32,7 @@ def _convert_entry(entry):
         if entry.get(key) is None:
             entry[key] = np.nan
     for key in ("minXglob",):
-        v = entry.get(key)
+        v: Any = entry.get(key)
         if v is None:
             entry[key] = np.nan
         elif isinstance(v, list):
@@ -40,7 +42,7 @@ def _convert_entry(entry):
     return entry
 
 
-def listPb():
+def listPb() -> dict[str, dict[str, Any]]:
     """Return a dictionary of all constrained optimization test problems.
 
     Each entry maps a problem name to a dict with keys:
@@ -54,11 +56,11 @@ def listPb():
         - space: design space bounds as numpy array, shape (dim, 2)
     """
     with open(_JSON_FILE, "r") as f:
-        raw = json.load(f)
+        raw: dict[str, dict[str, Any]] = json.load(f)
     return {name: _convert_entry(data) for name, data in raw.items()}
 
 
-def loadPb(pbName=None):
+def loadPb(pbName: str | None = None) -> dict[str, Any]:
     """Load constrained problem(s) by name.
 
     Args:
@@ -68,7 +70,7 @@ def loadPb(pbName=None):
         dict: Single problem dict if pbName given, else all problems.
     """
 
-    allPb = listPb()
+    allPb: dict[str, dict[str, Any]] = listPb()
     if pbName:
         return allPb.get(pbName, {})
     return allPb

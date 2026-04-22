@@ -21,7 +21,7 @@ class FunDeb1(TestFunction):
         """
         L. LAURENT -- 06/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         numerous local minima
         5^np global minimum :

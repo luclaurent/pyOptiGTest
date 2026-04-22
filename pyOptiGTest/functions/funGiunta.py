@@ -22,7 +22,7 @@ class FunGiunta(TestFunction):
         Giunta function
         L. LAURENT -- 16/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2)=0.06447042053690566 for (0.4673200277395354, 0.4673200169591304)
         Design space: -1<xi<1

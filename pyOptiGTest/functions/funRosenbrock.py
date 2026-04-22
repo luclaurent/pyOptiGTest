@@ -21,7 +21,7 @@ class FunRosenbrock(TestFunction):
         """
         L. LAURENT -- 12/05/2010 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(1,...,1)=0
         Design space -30<xi<30

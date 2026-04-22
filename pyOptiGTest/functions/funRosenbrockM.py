@@ -22,7 +22,7 @@ class FunRosenbrockM(TestFunction):
         Modified Rosenbrock function
         L. LAURENT -- 14/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(-1,-1)=0
         Design space -2<xi<2

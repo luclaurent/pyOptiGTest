@@ -14,6 +14,10 @@
     https://github.com/luclaurent/optigtest/
 """
 
+
+
+from typing import Any
+
 from . import dbUnconstrained
 from . import dbConstrained
 from . import dbMultiObj
@@ -21,7 +25,7 @@ from . import dbMultiObj
 import numpy as np
 
 
-def loadPb(pbName=None, dim=0):
+def loadPb(pbName: str | None = None, dim: int = 0) -> dict[str, Any]:
     """Load problem(s) by name from all categories.
 
     Args:
@@ -32,13 +36,13 @@ def loadPb(pbName=None, dim=0):
         dict: Single problem dict if pbName given, else all problems.
     """
 
-    allPb = listPb(dim)
+    allPb: dict[str, dict[str, Any]] = listPb(dim)
     if pbName:
         return allPb.get(pbName, {})
     return allPb
 
 
-def listPb(dim=0):
+def listPb(dim: int = 0) -> dict[str, dict[str, Any]]:
     """Return a dictionary of all optimization test problems.
 
     Merges unconstrained, constrained, and multi-objective problems.
@@ -50,14 +54,14 @@ def listPb(dim=0):
         dict: All problems keyed by name.
     """
 
-    pb = {}
+    pb: dict[str, dict[str, Any]] = {}
     pb.update(dbUnconstrained.listPb(dim))
     pb.update(dbConstrained.listPb())
     pb.update(dbMultiObj.listPb())
     return pb
 
 
-def listPbByType(pbType=None, dim=0):
+def listPbByType(pbType: str | None = None, dim: int = 0) -> dict[str, dict[str, Any]]:
     """Return problems filtered by type.
 
     Args:

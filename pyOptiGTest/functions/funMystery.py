@@ -22,7 +22,7 @@ class FunMystery(TestFunction):
         "Mystery" function (Sasena 2002)
         L. LAURENT -- 01/04/2011 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         3 local minima
         1 global minimum: f(x)=-1.4565 pour x={2.5044,2.5778}

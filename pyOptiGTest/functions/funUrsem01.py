@@ -22,7 +22,7 @@ class FunUrsem01(TestFunction):
         Ursem 1 function
         L. LAURENT -- 24/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(1.69714,0)=-4.8168
         Design space -2.5<x1<3 -2<x<2

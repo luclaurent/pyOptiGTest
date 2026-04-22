@@ -21,8 +21,10 @@ are skipped by default so that normal CI runs are not slowed down).
 import pathlib
 import re
 import textwrap
+from typing import Any
 
 import numpy as np
+import numpy.typing as npt
 import pytest
 
 from conftest import ALL_FUNCTION_NAMES, REQUIRED_DIM, load_function
@@ -31,10 +33,10 @@ from conftest import ALL_FUNCTION_NAMES, REQUIRED_DIM, load_function
 # Constants
 # ---------------------------------------------------------------------------
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-WIKI_DIR = ROOT / "wiki"
-FIG_DIR = WIKI_DIR / "Figures"
-GRID_SIZE = 200
+ROOT: pathlib.Path = pathlib.Path(__file__).resolve().parent.parent
+WIKI_DIR: pathlib.Path = ROOT / "wiki"
+FIG_DIR: pathlib.Path = WIKI_DIR / "Figures"
+GRID_SIZE: int = 200
 
 # ---------------------------------------------------------------------------
 # Design-space bounds lookup.
@@ -308,7 +310,7 @@ BOUNDS: dict[str, tuple | list] = {
 }
 
 # Default fallback bounds when nothing else is available
-DEFAULT_BOUNDS = (-5, 5)
+DEFAULT_BOUNDS: tuple[float, float] = (-5, 5)
 
 # Functions known to misbehave (NaN/Inf on regular grids) – skip for pictures
 SKIP_PICTURE: set[str] = {
@@ -326,7 +328,7 @@ SKIP_PICTURE: set[str] = {
 # Helpers
 # ---------------------------------------------------------------------------
 
-def _get_bounds_2d(name: str):
+def _get_bounds_2d(name: str) -> tuple[tuple[float, float], tuple[float, float]]:
     """Return ((xlo, xhi), (ylo, yhi)) for a 2-variable evaluation."""
     if name in BOUNDS:
         b = BOUNDS[name]
@@ -342,7 +344,7 @@ def _get_bounds_2d(name: str):
     return DEFAULT_BOUNDS, DEFAULT_BOUNDS
 
 
-def _parse_docstring_bounds(name: str):
+def _parse_docstring_bounds(name: str) -> tuple[tuple[float, float], tuple[float, float]] | None:
     """Attempt to extract symmetric bounds from the function docstring."""
     try:
         fn = load_function(name)
@@ -387,7 +389,7 @@ def _get_2d_function_names() -> list[str]:
     return sorted(n for n in ALL_FUNCTION_NAMES if _is_2d_compatible(n))
 
 
-FUNCTION_NAMES_2D = _get_2d_function_names()
+FUNCTION_NAMES_2D: list[str] = _get_2d_function_names()
 
 
 # ---------------------------------------------------------------------------
@@ -395,7 +397,7 @@ FUNCTION_NAMES_2D = _get_2d_function_names()
 # ---------------------------------------------------------------------------
 
 @pytest.fixture(scope="session")
-def output_dirs():
+def output_dirs() -> pathlib.Path:
     """Create output directories and return the base figure dir."""
     FIG_DIR.mkdir(parents=True, exist_ok=True)
     return FIG_DIR
@@ -410,7 +412,7 @@ class TestGeneratePictures:
     """Generate 2D surface / contour / gradient pictures for every compatible function."""
 
     @pytest.mark.parametrize("name", FUNCTION_NAMES_2D)
-    def test_generate_picture(self, name, output_dirs):
+    def test_generate_picture(self, name: str, output_dirs: pathlib.Path) -> None:
         matplotlib = pytest.importorskip("matplotlib")
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
@@ -527,7 +529,7 @@ class TestGeneratePictures:
 class TestGenerateWikiMarkdown:
     """Generate Markdown pages listing all function pictures for the GitHub wiki."""
 
-    def test_generate_markdown(self, output_dirs):
+    def test_generate_markdown(self, output_dirs: pathlib.Path) -> None:
         matplotlib = pytest.importorskip("matplotlib")
 
         lines = [
@@ -567,7 +569,7 @@ class TestGenerateWikiMarkdown:
 class TestGenerateCategoryMarkdown:
     """Generate per-category Markdown files (Unconstrained, etc.)."""
 
-    def test_generate_unconstrained_md(self, output_dirs):
+    def test_generate_unconstrained_md(self, output_dirs: pathlib.Path) -> None:
         matplotlib = pytest.importorskip("matplotlib")
 
         lines = [

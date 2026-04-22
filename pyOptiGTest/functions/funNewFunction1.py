@@ -22,7 +22,7 @@ class FunNewFunction1(TestFunction):
         New Function 1 function
         L. LAURENT -- 20/03/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=-0.17894509347721144 for x=[-8.4666,-9.9988]
         Design space: -10<xi<10

@@ -22,7 +22,7 @@ class FunXinSheYang4(TestFunction):
         Xin-She-Yang 4 function
         L. LAURENT -- 28/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(0,...,0)=-1
         Design space -10<xi<10

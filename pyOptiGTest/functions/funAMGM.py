@@ -22,7 +22,7 @@ class FunAMGM(TestFunction):
         AMGM function (Arthmetic Mean - Geometric Mean)
         L. LAURENT -- 13/03/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=0 for x1=x2=x3=...=xn
         Design space: 0<xi<10

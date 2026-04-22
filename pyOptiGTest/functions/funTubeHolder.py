@@ -21,7 +21,7 @@ class FunTubeHolder(TestFunction):
         """
         L. LAURENT -- 22/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(pi/2,0)=-10.872299901558
         Design space -10<xi<10

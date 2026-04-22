@@ -22,7 +22,7 @@ class FunQing(TestFunction):
         Qing function
         L. LAURENT -- 19/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=0 for xi=(+/-sqrt(i),...,+/-sqrt(i))
         Design space: -500<xi<500

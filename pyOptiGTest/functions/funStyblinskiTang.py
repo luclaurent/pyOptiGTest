@@ -22,7 +22,7 @@ class FunStyblinskiTang(TestFunction):
         Styblinski Tang function
         L. LAURENT -- 23/03/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=-39.16616570377142*nbvar for xi=-1.903534018185960
         Design space: -5<xi<5

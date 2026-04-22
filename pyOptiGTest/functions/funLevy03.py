@@ -22,7 +22,7 @@ class FunLevy03(TestFunction):
         Levy 03 function
         L. LAURENT -- 17/03/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=0 for xi=1
         Design space: -10<xi<10

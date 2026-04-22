@@ -21,7 +21,7 @@ class FunCrossInTray(TestFunction):
         """
         L. LAURENT -- 05/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         4 global minimas : f(x1,x2,x3,x4)=-2.06261218 for
         {(1.349406685353340,1.349406608602084),

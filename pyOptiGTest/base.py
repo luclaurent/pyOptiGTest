@@ -11,20 +11,24 @@
     https://github.com/luclaurent/optigtest/
 """
 
+
+
 import importlib
 import json
 import pathlib
 from abc import ABC, abstractmethod
 from functools import lru_cache
+from typing import Any, Callable
 
 import numpy as np
+import numpy.typing as npt
 
 # ---------------------------------------------------------------------------
 # Metadata loading helpers (lazy, cached)
 # ---------------------------------------------------------------------------
 
-_DB_DIR = pathlib.Path(__file__).parent
-_DB_FILES = {
+_DB_DIR: pathlib.Path = pathlib.Path(__file__).parent
+_DB_FILES: dict[str, pathlib.Path] = {
     "Unconstrained": _DB_DIR / "dbUnconstrained.json",
     "Constrained": _DB_DIR / "dbConstrained.json",
     "MultiObjective": _DB_DIR / "dbMultiObj.json",
@@ -32,19 +36,19 @@ _DB_FILES = {
 
 
 @lru_cache(maxsize=1)
-def _load_all_metadata() -> dict:
+def _load_all_metadata() -> dict[str, dict[str, Any]]:
     """Load and merge all JSON DB files into a single {funName: metadata} mapping.
 
     Keyed by *function name* (e.g. ``"funSphere"``), not problem name.
     """
-    result: dict = {}
+    result: dict[str, dict[str, Any]] = {}
     for db_path in _DB_FILES.values():
         if not db_path.exists():
             continue
         with open(db_path, "r") as f:
-            raw = json.load(f)
+            raw: dict[str, dict[str, Any]] = json.load(f)
         for _pb_name, entry in raw.items():
-            fun_names = entry.get("funobj") or []
+            fun_names: list[str] = entry.get("funobj") or []
             for fn in fun_names:
                 # Prefer entries with dim="inf" (most permissive)
                 if fn not in result or result[fn].get("dim") != "inf":
@@ -56,7 +60,7 @@ def _load_all_metadata() -> dict:
     return result
 
 
-def _metadata_for(fun_name: str) -> dict | None:
+def _metadata_for(fun_name: str) -> dict[str, Any] | None:
     """Return the DB entry for a given function name, or *None*."""
     return _load_all_metadata().get(fun_name)
 
@@ -76,28 +80,28 @@ class TestFunction(ABC):
     """
 
     # ------------------------------------------------------------------
-    # Metadata (point 1) — loaded lazily from JSON DB
+    # Metadata — loaded lazily from JSON DB
     # ------------------------------------------------------------------
 
     @property
     def name(self) -> str:
         """Canonical function name derived from the class name."""
-        cls_name = type(self).__name__
+        cls_name: str = type(self).__name__
         # Convert "FunSphere" → "funSphere"
         if cls_name and cls_name[0].isupper():
             return cls_name[0].lower() + cls_name[1:]
         return cls_name
 
     @property
-    def _meta(self) -> dict | None:
+    def _meta(self) -> dict[str, Any] | None:
         """Lazily fetched metadata dict from the JSON database."""
-        cache_attr = "_meta_cache"
+        cache_attr: str = "_meta_cache"
         if not hasattr(self, cache_attr):
             object.__setattr__(self, cache_attr, _metadata_for(self.name))
         return getattr(self, cache_attr)
 
     @property
-    def dim(self):
+    def dim(self) -> int | float:
         """Expected number of variables (``int`` or ``np.inf``)."""
         if self._meta is None:
             return np.inf
@@ -107,7 +111,7 @@ class TestFunction(ABC):
         return int(d)
 
     @property
-    def space(self) -> np.ndarray | None:
+    def space(self) -> npt.NDArray[np.floating[Any]] | None:
         """Design-space bounds as a ``(n_vars, 2)`` array, or ``None``."""
         if self._meta is None:
             return None
@@ -117,7 +121,7 @@ class TestFunction(ABC):
         return np.atleast_2d(np.asarray(s, dtype=float))
 
     @property
-    def min_fglob(self):
+    def min_fglob(self) -> float:
         """Known global minimum value (``float`` or ``np.nan``)."""
         if self._meta is None:
             return np.nan
@@ -125,7 +129,7 @@ class TestFunction(ABC):
         return np.nan if v is None else float(v)
 
     @property
-    def min_xglob(self):
+    def min_xglob(self) -> npt.NDArray[np.floating[Any]] | float:
         """Known global minimizer (numpy array or ``np.nan``)."""
         if self._meta is None:
             return np.nan
@@ -135,7 +139,7 @@ class TestFunction(ABC):
         return np.asarray(v, dtype=float)
 
     # ------------------------------------------------------------------
-    # Bounds property (point 4)
+    # Bounds property
     # ------------------------------------------------------------------
 
     @property
@@ -155,7 +159,9 @@ class TestFunction(ABC):
     # ------------------------------------------------------------------
 
     @abstractmethod
-    def evaluate(self, X, grad=False):
+    def evaluate(
+        self, X: npt.NDArray[np.floating[Any]], grad: bool = False
+    ) -> npt.NDArray[np.floating[Any]] | tuple[npt.NDArray[np.floating[Any]], npt.NDArray[np.floating[Any]]]:
         """Evaluate the function at *X*.
 
         Parameters
@@ -174,11 +180,11 @@ class TestFunction(ABC):
         """
 
     # ------------------------------------------------------------------
-    # __repr__ (point 3)
+    # __repr__ 
     # ------------------------------------------------------------------
 
     def __repr__(self) -> str:
-        parts = [f"<{type(self).__name__}"]
+        parts: list[str] = [f"<{type(self).__name__}"]
         parts.append(f"dim={self.dim}")
         if self.space is not None:
             lo = self.space[:, 0]
@@ -187,17 +193,17 @@ class TestFunction(ABC):
                 parts.append(f"bounds=[{lo[0]}, {hi[0]}]")
             else:
                 parts.append(f"bounds=({self.space.shape[0]} rows)")
-        fmin = self.min_fglob
+        fmin: float = self.min_fglob
         if np.isfinite(fmin):
             parts.append(f"f*={fmin}")
         return " ".join(parts) + ">"
 
     # ------------------------------------------------------------------
-    # Factory: from_name (point 6)
+    # Factory: from_name 
     # ------------------------------------------------------------------
 
     @staticmethod
-    def from_name(fun_name: str) -> "TestFunction":
+    def from_name(fun_name: str) -> TestFunction:
         """Instantiate a :class:`TestFunction` by its function name string.
 
         Parameters
@@ -219,15 +225,15 @@ class TestFunction(ABC):
         """
         mod = importlib.import_module(f"pyOptiGTest.functions.{fun_name}")
         # Convention: class name is CamelCase version, e.g. funSphere → FunSphere
-        class_name = fun_name[0].upper() + fun_name[1:]
-        cls = getattr(mod, class_name)
+        class_name: str = fun_name[0].upper() + fun_name[1:]
+        cls: type[TestFunction] = getattr(mod, class_name)
         return cls()
 
     # ------------------------------------------------------------------
-    # Caching / memoization (point 7)
+    # Caching / memoization
     # ------------------------------------------------------------------
 
-    def enable_cache(self):
+    def enable_cache(self) -> None:
         """Enable result caching for repeated evaluations at identical points.
 
         Once enabled, calling the instance will cache results keyed by the
@@ -238,27 +244,31 @@ class TestFunction(ABC):
             object.__setattr__(self, "_cache", {})
         object.__setattr__(self, "_caching_enabled", True)
 
-    def disable_cache(self):
+    def disable_cache(self) -> None:
         """Disable result caching (results already cached are kept)."""
         object.__setattr__(self, "_caching_enabled", False)
 
-    def clear_cache(self):
+    def clear_cache(self) -> None:
         """Remove all cached evaluation results."""
         if hasattr(self, "_cache"):
             self._cache.clear()
 
-    def __call_cached__(self, X, grad=False):
+    def __call_cached__(
+        self, X: npt.NDArray[np.floating[Any]], grad: bool = False
+    ) -> npt.NDArray[np.floating[Any]] | tuple[npt.NDArray[np.floating[Any]], npt.NDArray[np.floating[Any]]]:
         """Internal: cached version of __call__."""
-        key = (X.tobytes(), X.shape, grad)
+        key: tuple[bytes, tuple[int, ...], bool] = (X.tobytes(), X.shape, grad)
         if key not in self._cache:
             self._cache[key] = self.evaluate(X, grad)
         return self._cache[key]
 
     # ------------------------------------------------------------------
-    # Input validation, caching & __call__ (points 2, 7)
+    # Input validation, caching & __call__
     # ------------------------------------------------------------------
 
-    def __call__(self, X, grad=False):
+    def __call__(
+        self, X: npt.ArrayLike, grad: bool = False
+    ) -> npt.NDArray[np.floating[Any]] | tuple[npt.NDArray[np.floating[Any]], npt.NDArray[np.floating[Any]]]:
         X = np.atleast_2d(np.asarray(X, dtype=float))
         if X.ndim != 2:
             raise ValueError(

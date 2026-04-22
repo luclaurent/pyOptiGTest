@@ -22,7 +22,7 @@ class FunCamelbackSixHump(TestFunction):
         Six-Hump camel back function
         L. LAURENT -- 13/12/2010 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         6 local minima and  2 global:
         f(x1,x2)=-1.0316 for (x1,x2)={(-0.0898,0.7126),(0.0898,0.7126)}

@@ -22,7 +22,7 @@ class FunZettl(TestFunction):
         Zettl function
         L. LAURENT -- 28/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(-0.02896,0)=-0.0037912
         Design space -1<xi<5

@@ -22,7 +22,7 @@ class FunAHE(TestFunction):
         Axis parallel hyper-ellipsoid (Weighted Sphere Model) function
         L. LAURENT -- 21/02/2012 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 global minimum: x=(0,0,...,0) >> f(x)=0
         design space -5.12<xi<5.12

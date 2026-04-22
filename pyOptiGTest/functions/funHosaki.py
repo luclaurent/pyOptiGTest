@@ -22,7 +22,7 @@ class FunHosaki(TestFunction):
         Hosaki function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2)=-2.3458 for (x1,x2)=(4,2)
         Design space: 0<xi<5

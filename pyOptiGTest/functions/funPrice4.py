@@ -22,7 +22,7 @@ class FunPrice4(TestFunction):
         Price 4 function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=0 for x={(0,0),(2,4),(1.464,?2.506)}
         Design space: -500<xi<500

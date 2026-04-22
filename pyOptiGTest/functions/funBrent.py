@@ -21,7 +21,7 @@ class FunBrent(TestFunction):
         """
         L. LAURENT -- 13/12/2010 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum :
         f(x1,x2)=0 for (x1,x2)=(-10,-10)

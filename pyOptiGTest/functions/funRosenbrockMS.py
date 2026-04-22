@@ -23,7 +23,7 @@ class FunRosenbrockMS(TestFunction):
         L. LAURENT -- 16/05/2012 -- luc.laurent@lecnam.net
         A. S\'obester, S. J. Leary, and A. J. Keane. On the design of optimization strategies based on global response surface approximation models. Journal of Global Optimization, 33(1):31?59, 2005.
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         """
 

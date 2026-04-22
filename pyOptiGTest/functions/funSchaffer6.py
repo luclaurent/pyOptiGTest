@@ -22,7 +22,7 @@ class FunSchaffer6(TestFunction):
         Schaffer 06 function
         L. LAURENT -- 27/04/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=0 for xi=0
         Design space: -100<xi<100

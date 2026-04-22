@@ -22,7 +22,7 @@ class FunKeane(TestFunction):
         Keane's function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2)=-0.673668 for (x1,x2)={(0,1.39325),(1.39325,0)}
         Design space: 0<xi<10

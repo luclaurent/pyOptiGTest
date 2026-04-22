@@ -22,7 +22,7 @@ class FunYaoLiu9(TestFunction):
         Yao-Liu 9 function
         L. LAURENT -- 28/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(0,...,0)=0
         Design space -5.12<xi<5.12

@@ -22,7 +22,7 @@ class FunParsopoulos(TestFunction):
         Parsopoulos function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=0 for x=(pi/2,pi)
         Design space: -5<xi<5

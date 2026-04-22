@@ -21,7 +21,7 @@ class FunEggHolder(TestFunction):
         """
         L. LAURENT -- 16/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         one local minimum
         1 global minimum : x=(512.0, 404.2319) >> f(x)=-959.640662711

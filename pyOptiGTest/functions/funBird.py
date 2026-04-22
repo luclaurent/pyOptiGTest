@@ -22,7 +22,7 @@ class FunBird(TestFunction):
         Bird's function
         L. LAURENT -- 31/10/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         one local minimum
         1 global minimum : x={(4.70104,3.15294),(-1.58214, -3.13024)} >> f(x)=-106.764537

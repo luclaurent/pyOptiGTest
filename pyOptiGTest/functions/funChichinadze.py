@@ -21,7 +21,7 @@ class FunChichinadze(TestFunction):
         """
         L. LAURENT -- 04/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 global minimum
         f(x1,x2)=-42.94438701899098  for (x1,x2)=(6.189866586965680,0.5)

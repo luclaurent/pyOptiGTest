@@ -21,7 +21,7 @@ class FunRipple25(TestFunction):
         """
         L. LAURENT -- 14/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: x=0 >> f(-0.1,-0.1)=-2
         Design space 0<xi<1

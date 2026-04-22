@@ -21,7 +21,7 @@ class FunElAttarVidyasogarDutta(TestFunction):
         """
         L. LAURENT -- 15/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2)=1.712780354 for (3.40918683, -2.17143304)
         Design space: -500<xi<500

@@ -21,7 +21,7 @@ class FunPenHolder(TestFunction):
         """
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         4 global minimas : f(x)=-1.037845 for x=[9.646167708023526, 9.646167671043401;
         -9.646167708023526, 9.646167671043401;

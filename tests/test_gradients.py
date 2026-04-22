@@ -4,13 +4,17 @@ Checks that the analytical gradient (when available) approximately matches
 a central-difference numerical gradient.
 """
 
+
+
 import numpy as np
+import numpy.typing as npt
 import pytest
+from typing import Callable, Any
 
 from conftest import load_function, dim_for
 
 # Functions to verify gradients for (must implement grad=True properly)
-GRAD_FUNCTIONS = [
+GRAD_FUNCTIONS: list[str] = [
     "funAckley2",
     "funRosenbrock",
     "funDejong",
@@ -23,15 +27,19 @@ GRAD_FUNCTIONS = [
     "funChungReynolds",
 ]
 
-FD_STEP = 1e-6
-FD_RTOL = 1e-3
-FD_ATOL = 1e-4
+FD_STEP: float = 1e-6
+FD_RTOL: float = 1e-3
+FD_ATOL: float = 1e-4
 
 
-def _numerical_grad(fn, X, h=FD_STEP):
+def _numerical_grad(
+    fn: Callable[..., Any],
+    X: npt.NDArray[np.floating],
+    h: float = FD_STEP,
+) -> npt.NDArray[np.floating]:
     """Central-difference numerical gradient, shape (n_samples, n_vars)."""
     n_samples, n_vars = X.shape
-    grad = np.zeros_like(X)
+    grad: npt.NDArray[np.floating] = np.zeros_like(X)
     for j in range(n_vars):
         Xp = X.copy()
         Xm = X.copy()
@@ -44,7 +52,7 @@ def _numerical_grad(fn, X, h=FD_STEP):
 
 
 @pytest.mark.parametrize("name", GRAD_FUNCTIONS)
-def test_gradient_matches_fd(name):
+def test_gradient_matches_fd(name: str) -> None:
     """Verify analytical gradient against finite-difference approximation."""
     fn = load_function(name)
     n_vars = dim_for(name)

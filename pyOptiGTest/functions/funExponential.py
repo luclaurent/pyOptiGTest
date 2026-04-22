@@ -22,7 +22,7 @@ class FunExponential(TestFunction):
         Exponential function
         L. LAURENT -- 16/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         one local minimum
         1 global minimum : x=(0,...,0) >> f(x)=1

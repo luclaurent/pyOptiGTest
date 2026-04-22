@@ -22,7 +22,7 @@ class FunTrefethen(TestFunction):
         Trefethen function
         L. LAURENT -- 23/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(-0.02440307923,0.2106124261)=-3.3068686474
         Design space -5<xi<5

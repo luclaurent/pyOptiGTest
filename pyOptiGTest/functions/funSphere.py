@@ -22,7 +22,7 @@ class FunSphere(TestFunction):
         Sphere function
         L. LAURENT -- 16/09/2011 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(xi)=0 pour (x1,x2,x3,x4)=(0,...,0)
         Design space: -1<xi<1

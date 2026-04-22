@@ -1,0 +1,25 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: pyOptiGTest
+message: >-
+  A Python library of 282+ classical optimization test functions for benchmarking optimization and metaheuristic algorithms. Includes unconstrained, constrained, and multi-objective problems. 
+type: software
+doi: 10.5281/zenodo.XXX
+authors:
+  - given-names: Luc
+    family-names: Laurent
+    email: luc.laurent@lecnam.net
+    affiliation: 'LMSSC, Cnam'
+    orcid: 'https://orcid.org/0000-0002-8935-5929'
+repository-code: 'https://github.com/luclaurent/pyOptiGTest/'
+abstract: >-
+  A Python library of 282+ classical optimization test functions for benchmarking optimization and metaheuristic algorithms. Includes unconstrained, constrained, and multi-objective problems. All functions support vectorized NumPy evaluation and analytical gradient computation.
+keywords:
+  - Optimisation
+  - Benchmarks
+  - unconstrained optimization
+  - constrained optimization
+  - multi-objective optimization
+license: MIT

@@ -22,7 +22,7 @@ class FunSchmidtVetters(TestFunction):
         Schmidt-Vetters's function
         L. LAURENT -- 19/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(0.78547,0.78547,0.78547)=2.99845
         Design space 0<xi<10 (other minima outside of this space)

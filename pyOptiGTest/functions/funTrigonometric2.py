@@ -22,7 +22,7 @@ class FunTrigonometric2(TestFunction):
         Trigonometric 2 function
         L. LAURENT -- 23/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(0.9,...,0.9)=1
         Design space -500<xi<500 (focus on 0<xi<2)

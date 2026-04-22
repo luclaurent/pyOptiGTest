@@ -21,7 +21,7 @@ class FunDeflectedCorrugatedSpring(TestFunction):
         """
         L. LAURENT -- 16/03/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=0 for xi=alpha
         Design space: 0<xi<2*alpha

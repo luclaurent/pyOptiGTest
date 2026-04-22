@@ -22,7 +22,7 @@ class FunRastrigin(TestFunction):
         Rastrigin function
         L. LAURENT -- 21/02/2012 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         numerous local minima
         1 minimum global: x=(0,0,...,0) >> f(x)=0

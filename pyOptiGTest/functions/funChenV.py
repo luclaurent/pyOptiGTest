@@ -21,7 +21,7 @@ class FunChenV(TestFunction):
         """
         L. LAURENT -- 04/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 global minimum
         f(x1,x2)=-2000 for (x1,x2)=(7/18,13/18)

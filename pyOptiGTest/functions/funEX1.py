@@ -22,7 +22,7 @@ class FunEX1(TestFunction):
         EX1 function
         L. LAURENT -- 16/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2)=-1.28186 for (1.764,11.15)
         Design space: 0<xi<12

@@ -21,7 +21,7 @@ class FunDamavandi(TestFunction):
         """
         L. LAURENT -- 05/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 global minimum : f(2,2)=0
         Design space: 0<xi<14

@@ -188,7 +188,7 @@ See [examples.md](examples.md) for detailed usage examples.
 
 ## Available Functions (selection)
 
-Below is a non-exhaustive list of included test functions:
+Below is a non-exhaustive list of included test functions (almost complete list can be found [here](wiki/index.md)):
 
 | Function | Dimensions | Global Minimum |
 |---|---|---|
@@ -250,6 +250,24 @@ pyOptiGTest/
 └── README.md
 ```
 
+## MATLAB/Octave version
+
+A similar MATLAB/Octave toolbox can be found [here](https://github.com/luclaurent/optiGTest).
+
+## References
+
+This toolbox is inspired by many existing codes and papers
+
+* [AMPGO](http://infinity77.net/global_optimization/index.html) (and [github repository](https://github.com/andyfaff/ampgo/))
+* E. P. Adorio and U. P. Diliman. [MVF - Multivariate Test Functions Library in C for Unconstrained Global Optimization.](https://www.google.fr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi2j_iz8sbTAhWG0hoKHfYLAncQFggnMAA&url=http%3A%2F%2Fwww.geocities.ws%2Feadorio%2Fmvf.pdf&usg=AFQjCNE7AMN9NpxLz2UGDInWKcwMeC120g&sig2=trbG1un24A4RfYCPdifjuA)
+* P. N. Suganthan, N. Hansen, J. J. Liang, K. Deb, Y. P. Chen, A. Auger and S. Tiwari. Problem definitions and evaluation criteria for the CEC 2005 special session on real-parameter optimization. KanGAL report, 2005.[Link](https://www.lri.fr/~hansen/Tech-Report-May-30-05.pdf)
+* V. Bicik, Continuous optimization algorithms, Master thesis, Czech Technical University in Prague, 2010 [Link](https://dip.felk.cvut.cz/browse/pdfcache/bicikvla_2010dipl.pdf)
+* M. Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, *Int. Journal of Mathematical Modelling and Numerical Optimisation*, Vol. 4, No. 2, pp. 150--194 (2013) doi: [10.1504/IJMMNO.2013.055204](https://doi.org/10.1504/IJMMNO.2013.055204) arXiv: [1308.4008](https://arxiv.org/abs/1308.4008) [PDF](https://arxiv.org/pdf/1308.4008.pdf)
+* M. Molga, C. Smutnick. Test functions for optimization needs, *Comput. Inform. Sci.*, 1-43, 2005. [Link](http://new.zsd.iiar.pwr.wroc.pl/files/docs/functions.pdf)
+* M. M. Ali, C. Khompatraporn and Z. B. Zabinsky, *Journal of Global Optimisation* (2005) 31:635. doi: [10.1007/s10898-004-9972-2](https://doi.org/10.1007/s10898-004-9972-2) [PDF](http://folk.uib.no/ssu029/Pdf_file/Ali05.pdf)
+* [Virtual Library of Simulation Experiments](https://www.sfu.ca/~ssurjano/other.html)
+* Wikipedia. [Test functions for optimization](http://en.wikipedia.org/w/index.php?title=Test%20functions%20for%20optimization&oldid=837180368), 2018. [Online; accessed 13-May-2018]
+
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
@@ -260,5 +278,5 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Links
 
-- **Repository**: [https://github.com/luclaurent/optigtest](https://github.com/luclaurent/optigtest)
-- **Issues**: [https://github.com/luclaurent/optigtest/issues](https://github.com/luclaurent/optigtest/issues)
+- **Repository**: [https://github.com/luclaurent/pyoptigtest](https://github.com/luclaurent/pyoptigtest)
+- **Issues**: [https://github.com/luclaurent/pyoptigtest/issues](https://github.com/luclaurent/pyoptigtest/issues)

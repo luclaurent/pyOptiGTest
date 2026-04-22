@@ -21,7 +21,7 @@ class FunBranin2(TestFunction):
         """
         L. LAURENT -- 13/12/2010 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         3 global minima :
         f(x1,x2)=5.559037 for (x1,x2)=(-3.2,12.53)

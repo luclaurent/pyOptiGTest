@@ -22,7 +22,7 @@ class FunBukin17(TestFunction):
         Bukin 17's function
         L. LAURENT -- 01/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         """
 

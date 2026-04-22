@@ -21,7 +21,7 @@ class FunBartelsConn(TestFunction):
         """
         L. LAURENT -- 31/10/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         one local minimum
         1 global minimum : x=(0,0) >> f(x)=1

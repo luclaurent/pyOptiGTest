@@ -22,7 +22,7 @@ class FunSchaffer4(TestFunction):
         Schaffer 4 function
         L. LAURENT -- 19/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(0,1.253115)=0.2924385
         Design space -100<xi<100

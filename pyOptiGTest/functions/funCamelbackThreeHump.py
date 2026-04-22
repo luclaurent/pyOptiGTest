@@ -21,7 +21,7 @@ class FunCamelbackThreeHump(TestFunction):
         """
         L. LAURENT -- 04/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 local minimum
         f(x1,x2)=0 for (x1,x2)=(0,0)

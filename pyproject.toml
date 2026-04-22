@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pyOptiGTest"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Python implementation of optimization test functions for benchmarking"
 readme = "README.md"
 license = "MIT"
@@ -43,6 +43,9 @@ include = ["pyOptiGTest/**"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["pyOptiGTest"]
+
+[tool.hatch.version]
+path = "pyOptiGTest/__init__.py"
 
 # --- default env (dev) ---
 [tool.hatch.envs.default]

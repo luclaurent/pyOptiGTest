@@ -22,7 +22,7 @@ class FunUrsemWaves(TestFunction):
         Ursem Waves function
         L. LAURENT -- 24/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(1.2,1.2)=-8.5536
         Design space -2<xi<2

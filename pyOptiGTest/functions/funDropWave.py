@@ -21,7 +21,7 @@ class FunDropWave(TestFunction):
         """
         L. LAURENT -- 16/03/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=-1 for xi=0
         Design space: -5.12<xi<5.12

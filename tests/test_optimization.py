@@ -4,9 +4,13 @@ Each test loads a problem via the optigtest class, runs a real optimizer,
 and checks that the solution is close to the known optimum (or Pareto-optimal).
 """
 
+
+
 import numpy as np
+import numpy.typing as npt
 import pytest
-from scipy.optimize import minimize
+from typing import Any
+from scipy.optimize import minimize, OptimizeResult
 
 # from pyOptiGTest.pyOptiGTest import optigtest
 from pyOptiGTest import optigtest
@@ -16,19 +20,19 @@ from pyOptiGTest import optigtest
 # ---------------------------------------------------------------------------
 
 @pytest.fixture
-def rosenbrock_pb():
+def rosenbrock_pb() -> optigtest:
     """Unconstrained Rosenbrock problem in 5 dimensions."""
     return optigtest("Rosenbrock", dim=5)
 
 
 @pytest.fixture
-def rosenbrock_disk_pb():
+def rosenbrock_disk_pb() -> optigtest:
     """Constrained RosenbrockDisk problem (2-D, 1 constraint)."""
     return optigtest("RosenbrockDisk")
 
 
 @pytest.fixture
-def binh_korn_pb():
+def binh_korn_pb() -> optigtest:
     """Multi-objective BinhKorn problem (2-D, 2 objectives, 2 constraints)."""
     return optigtest("BinhKorn")
 
@@ -37,7 +41,11 @@ def binh_korn_pb():
 # Helpers
 # ---------------------------------------------------------------------------
 
-def _scalar_obj(pb, X_2d, grad):
+def _scalar_obj(
+    pb: optigtest,
+    X_2d: npt.NDArray[np.floating],
+    grad: bool,
+) -> float | tuple[float, npt.NDArray[np.floating]]:
     """Evaluate single-objective with optional gradient."""
     if grad:
         f, g = pb.evalObj(X_2d, grad=True)
@@ -45,7 +53,7 @@ def _scalar_obj(pb, X_2d, grad):
     return float(pb.evalObj(X_2d)[0])
 
 
-def _cons_value(pb, X_2d, idx):
+def _cons_value(pb: optigtest, X_2d: npt.NDArray[np.floating], idx: int) -> float:
     """Return scalar constraint value for constraint *idx*."""
     c = pb.evalCons(X_2d, num=[idx])
     return float(c[0])
@@ -58,7 +66,7 @@ def _cons_value(pb, X_2d, idx):
 class TestUnconstrainedOptimization:
     """Minimize Rosenbrock with L-BFGS-B and check the result."""
 
-    def test_rosenbrock_converges(self, rosenbrock_pb):
+    def test_rosenbrock_converges(self, rosenbrock_pb: optigtest) -> None:
         pb = rosenbrock_pb
 
         def objective(x):
@@ -73,7 +81,7 @@ class TestUnconstrainedOptimization:
         # Rosenbrock global minimum is 0 (auto-discovered DB stores nan)
         assert result.fun == pytest.approx(0.0, abs=1e-4)
 
-    def test_rosenbrock_minimizer(self, rosenbrock_pb):
+    def test_rosenbrock_minimizer(self, rosenbrock_pb: optigtest) -> None:
         pb = rosenbrock_pb
 
         def objective(x):
@@ -95,7 +103,7 @@ class TestUnconstrainedOptimization:
 class TestConstrainedOptimization:
     """Minimize RosenbrockDisk with SLSQP and verify feasibility + optimality."""
 
-    def test_rosenbrock_disk_converges(self, rosenbrock_disk_pb):
+    def test_rosenbrock_disk_converges(self, rosenbrock_disk_pb: optigtest) -> None:
         pb = rosenbrock_disk_pb
 
         def objective(x):
@@ -114,7 +122,7 @@ class TestConstrainedOptimization:
         assert result.success or result.fun < 1e-4
         assert result.fun == pytest.approx(pb.getGlobZmin(), abs=1e-3)
 
-    def test_rosenbrock_disk_feasible(self, rosenbrock_disk_pb):
+    def test_rosenbrock_disk_feasible(self, rosenbrock_disk_pb: optigtest) -> None:
         pb = rosenbrock_disk_pb
 
         def objective(x):
@@ -133,7 +141,7 @@ class TestConstrainedOptimization:
         feasible = pb.checkCons(result.x.reshape(1, -1))
         assert feasible[0], "Optimal point should be feasible"
 
-    def test_rosenbrock_disk_minimizer(self, rosenbrock_disk_pb):
+    def test_rosenbrock_disk_minimizer(self, rosenbrock_disk_pb: optigtest) -> None:
         pb = rosenbrock_disk_pb
 
         def objective(x):
@@ -160,7 +168,7 @@ class TestMultiObjectiveOptimization:
     """Approximate Pareto front of BinhKorn via weighted-sum scalarization."""
 
     @staticmethod
-    def _solve_weighted(pb, w1):
+    def _solve_weighted(pb: optigtest, w1: float) -> OptimizeResult:
         """Solve BinhKorn for a given weight w1 on f1 (w2 = 1 - w1)."""
         w2 = 1.0 - w1
 
@@ -189,7 +197,7 @@ class TestMultiObjectiveOptimization:
         return minimize(objective, x0, method="SLSQP", jac=True,
                         bounds=bounds, constraints=constraints)
 
-    def test_binh_korn_pareto_feasible(self, binh_korn_pb):
+    def test_binh_korn_pareto_feasible(self, binh_korn_pb: optigtest) -> None:
         """All Pareto-optimal points should satisfy constraints."""
         pb = binh_korn_pb
         for w1 in np.linspace(0.1, 0.9, 5):
@@ -198,7 +206,7 @@ class TestMultiObjectiveOptimization:
                 feasible = pb.checkCons(res.x.reshape(1, -1))
                 assert feasible[0], f"Point for w1={w1} should be feasible"
 
-    def test_binh_korn_pareto_diversity(self, binh_korn_pb):
+    def test_binh_korn_pareto_diversity(self, binh_korn_pb: optigtest) -> None:
         """Different weights should yield distinct trade-off points."""
         pb = binh_korn_pb
         points = []
@@ -216,7 +224,7 @@ class TestMultiObjectiveOptimization:
         assert np.ptp(points[:, 0]) > 1.0, "f1 should vary across Pareto front"
         assert np.ptp(points[:, 1]) > 1.0, "f2 should vary across Pareto front"
 
-    def test_binh_korn_extreme_weights(self, binh_korn_pb):
+    def test_binh_korn_extreme_weights(self, binh_korn_pb: optigtest) -> None:
         """Weight near 1.0 should favour f1; weight near 0.0 should favour f2."""
         pb = binh_korn_pb
         res_f1 = self._solve_weighted(pb, 0.99)

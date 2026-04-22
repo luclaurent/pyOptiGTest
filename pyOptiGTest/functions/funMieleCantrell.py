@@ -22,7 +22,7 @@ class FunMieleCantrell(TestFunction):
         Miele Cantrell's function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2,x3,x4)=0 for (x1,x2,x3,x4)=(0,1,1,1)
         Design space: -1<xi<1

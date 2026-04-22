@@ -11,15 +11,20 @@
     https://github.com/luclaurent/optigtest/
 """
 
+
+
 import logging
 import importlib
-import numpy as np
 import sys
+from typing import Any, Callable
+
+import numpy as np
+import numpy.typing as npt
 
 from . import dbProblems as dbP
 
-textSpacer = '=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#='
-smalltextSpacer = '------------------------'
+textSpacer: str = '=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#='
+smalltextSpacer: str = '------------------------'
 
 
 class optigtest:
@@ -33,7 +38,12 @@ class optigtest:
         dim: Problem dimension (optional, required for variable-dim problems).
     """
 
-    def __init__(self, namePb=None, X=None, dim=None):
+    def __init__(
+        self,
+        namePb: str | None = None,
+        X: npt.ArrayLike | None = None,
+        dim: int | None = None,
+    ) -> None:
         # initialize object
         self.initObj()
         # initialize logging
@@ -57,34 +67,34 @@ class optigtest:
             self.prepX(X)
             self.evalAll()
 
-    def initObj(self):
+    def initObj(self) -> None:
         """Initialize the structure of the object."""
-        self.namePb = ''
-        self.typePb = ''
-        self.dim = 0
-        self.Xeval = None
+        self.namePb: str = ''
+        self.typePb: str = ''
+        self.dim: int = 0
+        self.Xeval: npt.NDArray[np.floating[Any]] | None = None
         self.populate()
         self.initEval()
 
-    def initEval(self):
+    def initEval(self) -> None:
         """Initialize storage for evaluations."""
-        self.objEval = []
-        self.consEval = []
-        self.objGradEval = []
-        self.consGradEval = []
+        self.objEval: list[Any] = []
+        self.consEval: list[Any] = []
+        self.objGradEval: list[Any] = []
+        self.consGradEval: list[Any] = []
 
-    def populate(self, dictPb=None):
+    def populate(self, dictPb: dict[str, Any] | None = None) -> None:
         """Populate object attributes from a problem dictionary."""
-        self.typePb = ''
-        self.funObj = []
-        self.funCons = []
-        self.typeCons = []
-        self.designSpace = np.empty((0, 2))
-        self.dimAvailable = 0
-        self.locMinZ = []
-        self.locMinX = []
-        self.globMinZ = np.nan
-        self.globMinX = np.nan
+        self.typePb: str = ''
+        self.funObj: list[str] = []
+        self.funCons: list[str] = []
+        self.typeCons: list[str] = []
+        self.designSpace: npt.NDArray[np.floating[Any]] = np.empty((0, 2))
+        self.dimAvailable: int | float = 0
+        self.locMinZ: list[Any] = []
+        self.locMinX: list[Any] = []
+        self.globMinZ: float | npt.NDArray[np.floating[Any]] = np.nan
+        self.globMinX: float | npt.NDArray[np.floating[Any]] = np.nan
 
         if dictPb is not None:
             self.funObj = dictPb.get('funobj', []) or []
@@ -103,7 +113,7 @@ class optigtest:
             if 'minXloc' in dictPb:
                 self.locMinX = dictPb['minXloc']
 
-    def loadData(self, pbName=None, dim=None):
+    def loadData(self, pbName: str | None = None, dim: int | None = None) -> dict[str, Any]:
         """Load data of the selected test case."""
         dataPb = dbP.loadPb(pbName, self.dim)
         self.populate()
@@ -127,51 +137,51 @@ class optigtest:
 
     # ---- Accessors ----
 
-    def listPb(self, pbType=None):
+    def listPb(self, pbType: str | None = None) -> dict[str, dict[str, Any]]:
         """Return the list of all available problems, optionally filtered by type."""
-        allPb = dbP.listPbByType(pbType, self.dim)
+        allPb: dict[str, dict[str, Any]] = dbP.listPbByType(pbType, self.dim)
         for pbname in sorted(allPb.keys()):
             logging.info('{} ({})'.format(pbname, allPb[pbname].get('type', '')))
         return allPb
 
-    def prepX(self, X=None):
+    def prepX(self, X: npt.ArrayLike | None = None) -> npt.NDArray[np.floating[Any]] | None:
         """Pack points into (N, dim) array."""
         if X is not None:
             self.Xeval = np.atleast_2d(X)
         return self.Xeval
 
-    def getDesignSpace(self):
+    def getDesignSpace(self) -> npt.NDArray[np.floating[Any]]:
         """Return the design space, tiled if needed for the current dimension."""
         dS = self.designSpace
         if dS.shape[0] == 1 and self.dim > 1:
             dS = np.tile(dS, (self.dim, 1))
         return dS
 
-    def getXmax(self):
+    def getXmax(self) -> npt.NDArray[np.floating[Any]]:
         return self.getDesignSpace()[:, 1]
 
-    def getXmin(self):
+    def getXmin(self) -> npt.NDArray[np.floating[Any]]:
         return self.getDesignSpace()[:, 0]
 
-    def getGlobZmin(self):
+    def getGlobZmin(self) -> float | npt.NDArray[np.floating[Any]]:
         return self.globMinZ
 
-    def getGlobXmin(self):
+    def getGlobXmin(self) -> float | npt.NDArray[np.floating[Any]]:
         return self.globMinX
 
-    def getTypePb(self):
+    def getTypePb(self) -> str:
         return self.typePb
 
-    def getNbObj(self):
+    def getNbObj(self) -> int:
         return len(self.funObj) if isinstance(self.funObj, list) else 1
 
-    def getNbCons(self):
+    def getNbCons(self) -> int:
         if self.funCons is None:
             return 0
         return len(self.funCons) if isinstance(self.funCons, list) else 1
 
     @staticmethod
-    def dimensionOk(dimToCheck, dimAvailable):
+    def dimensionOk(dimToCheck: int | float, dimAvailable: int | float | npt.ArrayLike) -> int:
         """Check if the chosen dimension is valid.
 
         Returns:
@@ -190,12 +200,12 @@ class optigtest:
                 status = int(dimAvailable[0])
         return status
 
-    def setPbName(self, pbName=None):
+    def setPbName(self, pbName: str | None = None) -> None:
         """Declare the problem and load data."""
         if pbName and self.loadData(pbName):
             self.namePb = pbName
 
-    def setDim(self, dim=None):
+    def setDim(self, dim: int | None = None) -> None:
         """Set the problem dimension and reload data."""
         if dim is not None:
             self.dim = dim
@@ -204,7 +214,7 @@ class optigtest:
     # ---- Function loading ----
 
     @staticmethod
-    def _load_function(funName):
+    def _load_function(funName: str) -> Callable[..., Any]:
         """Load a function by name from the functions subpackage."""
         from pyOptiGTest.base import TestFunction
         try:
@@ -216,13 +226,13 @@ class optigtest:
 
     # ---- Evaluation ----
 
-    def evalAll(self, X=None):
+    def evalAll(self, X: npt.ArrayLike | None = None) -> None:
         """Evaluate all objective and constraint functions."""
         self.objEval = self.evalObj(X)
         if self.funCons:
             self.consEval = self.evalCons(X)
 
-    def evalObj(self, X=None, grad=False, num=None):
+    def evalObj(self, X: npt.ArrayLike | None = None, grad: bool = False, num: list[int] | None = None) -> Any:
         """Evaluate objective function(s).
 
         Args:
@@ -233,24 +243,24 @@ class optigtest:
         Returns:
             list or single result: Function evaluations (and gradients if requested).
         """
-        Xrun = self.Xeval
+        Xrun: npt.NDArray[np.floating[Any]] | None = self.Xeval
         if X is not None:
             Xrun = self.prepX(X)
 
-        numOK = list(range(len(self.funObj)))
+        numOK: list[int] = list(range(len(self.funObj)))
         if num is not None:
             numOK = list(np.atleast_1d(num))
 
-        results = []
+        results: list[Any] = []
         for iF in numOK:
-            fn = self._load_function(self.funObj[iF])
+            fn: Callable[..., Any] = self._load_function(self.funObj[iF])
             results.append(fn(Xrun, grad=grad))
 
         if len(numOK) == 1:
             return results[0]
         return results
 
-    def evalCons(self, X=None, grad=False, num=None):
+    def evalCons(self, X: npt.ArrayLike | None = None, grad: bool = False, num: list[int] | None = None) -> Any:
         """Evaluate constraint function(s).
 
         Args:
@@ -264,24 +274,24 @@ class optigtest:
         if not self.funCons:
             return []
 
-        Xrun = self.Xeval
+        Xrun: npt.NDArray[np.floating[Any]] | None = self.Xeval
         if X is not None:
             Xrun = self.prepX(X)
 
-        numOK = list(range(len(self.funCons)))
+        numOK: list[int] = list(range(len(self.funCons)))
         if num is not None:
             numOK = list(np.atleast_1d(num))
 
-        results = []
+        results: list[Any] = []
         for iC in numOK:
-            fn = self._load_function(self.funCons[iC])
+            fn: Callable[..., Any] = self._load_function(self.funCons[iC])
             results.append(fn(Xrun, grad=grad))
 
         if len(numOK) == 1:
             return results[0]
         return results
 
-    def checkCons(self, X=None, Z=None):
+    def checkCons(self, X: npt.ArrayLike | None = None, Z: list[npt.NDArray[np.floating[Any]]] | None = None) -> npt.NDArray[np.bool_] | None:
         """Check constraint feasibility.
 
         Returns:
@@ -296,7 +306,7 @@ class optigtest:
         if not isinstance(Z, list):
             Z = [Z]
 
-        feasible = np.ones(Z[0].shape[0], dtype=bool)
+        feasible: npt.NDArray[np.bool_] = np.ones(Z[0].shape[0], dtype=bool)
         for iC, (z, tcons) in enumerate(zip(Z, self.typeCons)):
             if tcons == '<=':
                 feasible &= (z.flatten() <= 0)
@@ -312,7 +322,7 @@ class optigtest:
 
     # ---- Display ----
 
-    def showDetails(self, verbose=True):
+    def showDetails(self, verbose: bool = True) -> None:
         """Show details of the current problem."""
         if verbose:
             logging.info(textSpacer)
@@ -326,15 +336,15 @@ class optigtest:
         if verbose:
             logging.info(textSpacer)
 
-    def showPbs(self, dictPb=None):
+    def showPbs(self, dictPb: dict[str, dict[str, Any]] | None = None) -> None:
         """Show available problems grouped by type."""
         if dictPb is None:
             return
 
-        dictUn = {k: v for k, v in dictPb.items() if v.get('type') == 'Unconstrained'}
-        dictCons = {k: v for k, v in dictPb.items() if v.get('type') == 'Constrained'}
-        dictMulti = {k: v for k, v in dictPb.items() if v.get('type') == 'MultiObjective'}
-        nbPb = len(dictUn) + len(dictCons) + len(dictMulti)
+        dictUn: dict[str, dict[str, Any]] = {k: v for k, v in dictPb.items() if v.get('type') == 'Unconstrained'}
+        dictCons: dict[str, dict[str, Any]] = {k: v for k, v in dictPb.items() if v.get('type') == 'Constrained'}
+        dictMulti: dict[str, dict[str, Any]] = {k: v for k, v in dictPb.items() if v.get('type') == 'MultiObjective'}
+        nbPb: int = len(dictUn) + len(dictCons) + len(dictMulti)
 
         logging.info(textSpacer)
         if nbPb == 0:

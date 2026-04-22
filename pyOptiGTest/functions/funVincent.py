@@ -22,7 +22,7 @@ class FunVincent(TestFunction):
         Vincent function
         L. LAURENT -- 27/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(7.70628098,...,7.70628098)=-n
         Design space 0.25<xi<10

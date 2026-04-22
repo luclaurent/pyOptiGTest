@@ -22,7 +22,7 @@ class FunCigar(TestFunction):
         Cigar function
         L. LAURENT -- 14/03/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=-24.15681551650653 for xi=+/- 9.646157266348881
         Design space: -10<xi<10

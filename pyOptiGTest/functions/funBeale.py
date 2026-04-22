@@ -21,7 +21,7 @@ class FunBeale(TestFunction):
         """
         L. LAURENT -- 16/09/2011 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2)=0 pour (x1,x2)=(3,0.5)
         Design space: -4.5<x1<4.5, -4.5<x<4.5

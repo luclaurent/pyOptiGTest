@@ -21,7 +21,7 @@ class FunEasom(TestFunction):
         """
         L. LAURENT -- 15/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         4 global minimas : f(x1,x2)=-1 for (pi,pi)
         Design space: -100<xi<100

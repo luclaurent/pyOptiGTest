@@ -22,7 +22,7 @@ class FunAdjiman(TestFunction):
         Adjiman's function
         L. LAURENT -- 31/10/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         one local minimum
         1 global minimum : x=(2,0.10578) >> f(x)=-2.02181

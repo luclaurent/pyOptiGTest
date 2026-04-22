@@ -1,8 +1,17 @@
+__version__ = "0.1.0"
+
+from . import dbConstrained, dbFunctions, dbMultiObj, dbProblems, dbUnconstrained, pyOptiGTest
 from .base import TestFunction
-from . import dbConstrained
-from . import dbFunctions
-from . import dbMultiObj
-from . import dbProblems
-from . import dbUnconstrained
-from . import pyOptiGTest
 from .pyOptiGTest import optigtest
+
+__all__ = [
+    "__version__",
+    "TestFunction",
+    "dbConstrained",
+    "dbFunctions",
+    "dbMultiObj",
+    "dbProblems",
+    "dbUnconstrained",
+    "optigtest",
+    "pyOptiGTest",
+]

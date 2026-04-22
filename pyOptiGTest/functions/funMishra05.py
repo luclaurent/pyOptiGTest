@@ -22,7 +22,7 @@ class FunMishra05(TestFunction):
         Mishra 5 function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=-0.119829 for x=(-1.98682, -10.0)
         Design space: -10<xi<10

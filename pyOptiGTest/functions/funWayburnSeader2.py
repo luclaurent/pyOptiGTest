@@ -22,7 +22,7 @@ class FunWayburnSeader2(TestFunction):
         Wayburn-Seader 2 function
         L. LAURENT -- 27/02/2017 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         1 minimum global: f(0.2,1)=0
         Design space -500<xi<500

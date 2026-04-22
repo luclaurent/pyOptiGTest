@@ -1,19 +1,23 @@
 """Shared fixtures and helpers for pyOptiGTest tests."""
 
+
+
 import importlib
 import importlib.util
 import json
 import os
 import pathlib
+from typing import Any, Callable
 
 import numpy as np
+import numpy.typing as npt
 import pytest
 
 # ---------------------------------------------------------------------------
 # CLI option for picture generation
 # ---------------------------------------------------------------------------
 
-def pytest_addoption(parser):
+def pytest_addoption(parser: pytest.Parser) -> None:
     parser.addoption(
         "--gen-pictures",
         action="store_true",
@@ -22,7 +26,7 @@ def pytest_addoption(parser):
     )
 
 
-def pytest_collection_modifyitems(config, items):
+def pytest_collection_modifyitems(config: pytest.Config, items: list[pytest.Item]) -> None:
     if config.getoption("--gen-pictures"):
         return
     skip = pytest.mark.skip(reason="need --gen-pictures option to run")
@@ -34,16 +38,16 @@ def pytest_collection_modifyitems(config, items):
 # Paths
 # ---------------------------------------------------------------------------
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-FUNCTIONS_DIR = ROOT / "pyOptiGTest" / "functions"
-_JSON_FILE = pathlib.Path(__file__).resolve().parent / "conftest.json"
+ROOT: pathlib.Path = pathlib.Path(__file__).resolve().parent.parent
+FUNCTIONS_DIR: pathlib.Path = ROOT / "pyOptiGTest" / "functions"
+_JSON_FILE: pathlib.Path = pathlib.Path(__file__).resolve().parent / "conftest.json"
 
 # ---------------------------------------------------------------------------
 # Load test data from JSON
 # ---------------------------------------------------------------------------
 
 with open(_JSON_FILE, "r") as _f:
-    _CONFTEST_DATA = json.load(_f)
+    _CONFTEST_DATA: dict[str, Any] = json.load(_f)
 
 REQUIRED_DIM: dict[str, int] = _CONFTEST_DATA["required_dim"]
 DEFAULT_DIM: int = _CONFTEST_DATA["default_dim"]
@@ -73,7 +77,7 @@ def get_all_function_names() -> list[str]:
     return names
 
 
-def load_function(name: str):
+def load_function(name: str) -> Callable[..., Any]:
     """Import a single function by name from its file."""
     path = FUNCTIONS_DIR / f"{name}.py"
     spec = importlib.util.spec_from_file_location(name, str(path))
@@ -91,16 +95,16 @@ def dim_for(name: str) -> int:
 # Fixtures
 # ---------------------------------------------------------------------------
 
-ALL_FUNCTION_NAMES = get_all_function_names()
+ALL_FUNCTION_NAMES: list[str] = get_all_function_names()
 
 
 @pytest.fixture(scope="session")
-def rng():
+def rng() -> np.random.Generator:
     """Seeded random number generator for reproducible tests."""
     return np.random.default_rng(42)
 
 
 @pytest.fixture(scope="session")
-def all_function_names():
+def all_function_names() -> list[str]:
     """List of every function name in the package."""
     return ALL_FUNCTION_NAMES

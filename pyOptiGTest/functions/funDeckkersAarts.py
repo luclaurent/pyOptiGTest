@@ -22,7 +22,7 @@ class FunDeckkersAarts(TestFunction):
         Deckkers-Aarts function
         L. LAURENT -- 05/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         4 global minimas : f(x1,x2,x3,x4)=-24777 for {(0,-15), (0,15)}
         Design space: -20<xi<20

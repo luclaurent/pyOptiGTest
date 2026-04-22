@@ -24,7 +24,10 @@
     SOFTWARE.
 """
 
+
+
 import numpy as np
+import numpy.typing as npt
 
 
 ########################################
@@ -32,7 +35,10 @@ import numpy as np
 ########################################
 ########################################
 #% Ackley's function 1
-def funAckley1(X,grad=False):
+def funAckley1(
+    X: npt.NDArray[np.floating],
+    grad: bool = False,
+) -> npt.NDArray[np.floating] | tuple[npt.NDArray[np.floating], npt.NDArray[np.floating]]:
 
     #constants
     a=20

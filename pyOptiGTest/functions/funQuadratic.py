@@ -22,7 +22,7 @@ class FunQuadratic(TestFunction):
         Quadratic function
         L. LAURENT -- 19/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=-3873.7243 for x=(0.19388,0.48513)
         Design space: -10<xi<10

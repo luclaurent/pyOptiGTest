@@ -22,7 +22,7 @@ class FunHelicalValley(TestFunction):
         Helical Valley function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2,x3)=0 for (x1,x2,x3)=(1,0,0)
         Design space: -10<xi<10

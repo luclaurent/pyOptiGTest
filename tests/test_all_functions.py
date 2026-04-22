@@ -8,16 +8,19 @@ Each function is tested for:
   - deterministic behaviour (excluding stochastic functions)
 """
 
+
 import numpy as np
+import numpy.typing as npt
 import pytest
+from typing import Any, Callable
 
 from conftest import ALL_FUNCTION_NAMES, REQUIRED_DIM, DEFAULT_DIM, load_function, dim_for
 
 # Stochastic functions whose output may vary between identical calls
-STOCHASTIC = {"funQuartic", "funStochastic", "funXinSheYang1"}
+STOCHASTIC: set[str] = {"funQuartic", "funStochastic", "funXinSheYang1"}
 
 # Functions that produce NaN/Inf for some random inputs due to log/pow/div domains
-NAN_PRONE = {"funGear", "funGulfResearch", "funPaviani"}
+NAN_PRONE: set[str] = {"funGear", "funGulfResearch", "funPaviani"}
 
 
 # ---------------------------------------------------------------------------
@@ -25,11 +28,11 @@ NAN_PRONE = {"funGear", "funGulfResearch", "funPaviani"}
 # ---------------------------------------------------------------------------
 
 @pytest.fixture(params=ALL_FUNCTION_NAMES, scope="module")
-def func_bundle(request):
+def func_bundle(request: pytest.FixtureRequest) -> tuple[str, Callable[..., Any], int]:
     """Return (name, callable, n_vars) for one test function."""
-    name = request.param
-    fn = load_function(name)
-    n_vars = dim_for(name)
+    name: str = request.param
+    fn: Callable[..., Any] = load_function(name)
+    n_vars: int = dim_for(name)
     return name, fn, n_vars
 
 
@@ -41,7 +44,7 @@ class TestImport:
     """Every function file can be loaded."""
 
     @pytest.mark.parametrize("name", ALL_FUNCTION_NAMES)
-    def test_importable(self, name):
+    def test_importable(self, name: str) -> None:
         fn = load_function(name)
         assert callable(fn), f"{name} is not callable"
 
@@ -50,7 +53,7 @@ class TestOutputShape:
     """Output shapes follow the (n_samples,) convention."""
 
     @pytest.mark.parametrize("name", ALL_FUNCTION_NAMES)
-    def test_single_sample(self, name):
+    def test_single_sample(self, name: str) -> None:
         fn = load_function(name)
         n_vars = dim_for(name)
         X = np.random.default_rng(0).random((1, n_vars))
@@ -59,7 +62,7 @@ class TestOutputShape:
         assert result.shape == (1,), f"{name}: expected shape (1,), got {result.shape}"
 
     @pytest.mark.parametrize("name", ALL_FUNCTION_NAMES)
-    def test_batch_samples(self, name):
+    def test_batch_samples(self, name: str) -> None:
         fn = load_function(name)
         n_vars = dim_for(name)
         X = np.random.default_rng(1).random((10, n_vars))
@@ -72,7 +75,7 @@ class TestGradient:
     """Functions returning gradients should return (p, dp) with correct shapes."""
 
     @pytest.mark.parametrize("name", ALL_FUNCTION_NAMES)
-    def test_grad_shape(self, name):
+    def test_grad_shape(self, name: str) -> None:
         fn = load_function(name)
         n_vars = dim_for(name)
         X = np.random.default_rng(2).random((5, n_vars))
@@ -92,7 +95,7 @@ class TestDeterminism:
     """Calling the same function with the same input twice yields the same output."""
 
     @pytest.mark.parametrize("name", [n for n in ALL_FUNCTION_NAMES if n not in STOCHASTIC])
-    def test_deterministic(self, name):
+    def test_deterministic(self, name: str) -> None:
         fn = load_function(name)
         n_vars = dim_for(name)
         X = np.random.default_rng(3).random((4, n_vars))
@@ -105,7 +108,7 @@ class TestFiniteOutput:
     """Function output should not contain NaN or Inf for well-behaved input."""
 
     @pytest.mark.parametrize("name", [n for n in ALL_FUNCTION_NAMES if n not in NAN_PRONE])
-    def test_finite(self, name):
+    def test_finite(self, name: str) -> None:
         fn = load_function(name)
         n_vars = dim_for(name)
         # Use a small positive input to avoid potential division-by-zero issues

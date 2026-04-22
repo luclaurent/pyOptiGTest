@@ -22,7 +22,7 @@ class FunPaviani(TestFunction):
         Paviani function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=-45.778 for x=[9.351,...,9.351]
         Design space: 2.0001<xi<10

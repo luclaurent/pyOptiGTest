@@ -21,7 +21,7 @@ class FunPrice01(TestFunction):
         """
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x)=0 for x={(?5,?5),(?5,5),(5,?5),(5,5)}
         Design space: -500<xi<500

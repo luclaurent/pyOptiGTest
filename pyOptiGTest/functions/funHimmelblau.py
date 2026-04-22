@@ -22,7 +22,7 @@ class FunHimmelblau(TestFunction):
         Himmelblau function
         L. LAURENT -- 17/11/2016 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         global minimum : f(x1,x2)=0 for (x1,x2)=(3,2)
         Design space: -5<xi<5

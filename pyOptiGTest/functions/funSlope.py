@@ -22,7 +22,7 @@ class FunSlope(TestFunction):
         Slope function
         L. LAURENT -- 15/12/2011 -- luc.laurent@lecnam.net
         sources available here:
-        https://bitbucket.org/luclaurent/optigtest/
+        https://github.com/luclaurent/pyoptigtest/
         https://github.com/luclaurent/optigtest/
         """
 
