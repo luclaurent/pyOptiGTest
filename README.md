@@ -1,7 +1,7 @@
 # pyOptiGTest
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19692247.svg)](https://doi.org/10.5281/zenodo.19692247)
 
 A Python library of **282+ classical optimization test functions** for benchmarking optimization and metaheuristic algorithms. Includes unconstrained, constrained, and multi-objective problems. All functions support vectorized NumPy evaluation and analytical gradient computation.
 

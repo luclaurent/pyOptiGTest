@@ -6,7 +6,7 @@ title: pyOptiGTest
 message: >-
   A Python library of 282+ classical optimization test functions for benchmarking optimization and metaheuristic algorithms. Includes unconstrained, constrained, and multi-objective problems. 
 type: software
-doi: 10.5281/zenodo.XXX
+doi: 10.5281/zenodo.19692247
 authors:
   - given-names: Luc
     family-names: Laurent
