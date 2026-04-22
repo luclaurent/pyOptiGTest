@@ -63,7 +63,7 @@ jobs:
       - name: Verify package metadata
         run: |
           pipx install twine
-          twine check dist/*
+          twine check dist/*.whl dist/*.tar.gz
 
       - name: Sign distributions with Sigstore
         uses: sigstore/gh-action-sigstore-python@v3.3.0
