@@ -11,7 +11,8 @@ on:
         - "v*"
 
 permissions:
-  contents: write
+  contents: read
+  id-token: write
   
 
 jobs:

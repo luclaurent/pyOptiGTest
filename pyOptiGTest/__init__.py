@@ -1,4 +1,4 @@
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 from . import dbConstrained, dbFunctions, dbMultiObj, dbProblems, dbUnconstrained, pyOptiGTest
 from .base import TestFunction
