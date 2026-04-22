@@ -11,7 +11,7 @@ import numpy.typing as npt
 import pytest
 from typing import Callable, Any
 
-from conftest import load_function, dim_for
+from .conftest import load_function, dim_for
 
 # Functions to verify gradients for (must implement grad=True properly)
 GRAD_FUNCTIONS: list[str] = [

@@ -10,11 +10,10 @@ Each function is tested for:
 
 
 import numpy as np
-import numpy.typing as npt
 import pytest
 from typing import Any, Callable
 
-from conftest import ALL_FUNCTION_NAMES, REQUIRED_DIM, DEFAULT_DIM, load_function, dim_for
+from .conftest import ALL_FUNCTION_NAMES, REQUIRED_DIM, DEFAULT_DIM, load_function, dim_for
 
 # Stochastic functions whose output may vary between identical calls
 STOCHASTIC: set[str] = {"funQuartic", "funStochastic", "funXinSheYang1"}

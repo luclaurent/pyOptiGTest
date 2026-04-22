@@ -20,14 +20,11 @@ are skipped by default so that normal CI runs are not slowed down).
 
 import pathlib
 import re
-import textwrap
-from typing import Any
 
 import numpy as np
-import numpy.typing as npt
 import pytest
 
-from conftest import ALL_FUNCTION_NAMES, REQUIRED_DIM, load_function
+from .conftest import ALL_FUNCTION_NAMES, REQUIRED_DIM, load_function
 
 # ---------------------------------------------------------------------------
 # Constants

@@ -6,7 +6,7 @@ import numpy as np
 import numpy.typing as npt
 import pytest
 
-from conftest import KNOWN_OPTIMA, load_function
+from .conftest import KNOWN_OPTIMA, load_function
 
 
 @pytest.mark.parametrize(

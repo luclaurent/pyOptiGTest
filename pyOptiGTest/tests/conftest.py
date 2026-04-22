@@ -5,12 +5,10 @@
 import importlib
 import importlib.util
 import json
-import os
 import pathlib
 from typing import Any, Callable
 
 import numpy as np
-import numpy.typing as npt
 import pytest
 
 # ---------------------------------------------------------------------------

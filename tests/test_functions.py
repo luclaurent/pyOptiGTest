@@ -1,1 +1,0 @@
-# Legacy stub replaced — see test_all_functions.py for comprehensive tests.

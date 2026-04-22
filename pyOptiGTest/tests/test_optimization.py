@@ -9,7 +9,6 @@ and checks that the solution is close to the known optimum (or Pareto-optimal).
 import numpy as np
 import numpy.typing as npt
 import pytest
-from typing import Any
 from scipy.optimize import minimize, OptimizeResult
 
 # from pyOptiGTest.pyOptiGTest import optigtest

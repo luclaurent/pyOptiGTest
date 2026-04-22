@@ -29,11 +29,20 @@ cd optigtest
 pip install .
 ```
 
-For development:
+For testing:
 
 ```bash
-pip install -e ".[dev]"
+pip install -e ".[test]"
 ```
+and run
+```bash
+pytest 
+```
+or 
+```bash
+pytest --pyargs pyOptiGTest
+```
+
 
 ## Quick Start
 
