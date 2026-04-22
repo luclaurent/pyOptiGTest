@@ -55,8 +55,8 @@ dependencies = [
 ]
 
 [tool.hatch.envs.default.scripts]
-test = "pytest {args:tests}"
-test-cov = "pytest --cov=pyOptiGTest --cov-report=term-missing {args:tests}"
+test = "pytest {args:pyOptiGTest/tests}"
+test-cov = "pytest --cov=pyOptiGTest --cov-report=term-missing {args:pyOptiGTest/tests}"
 
 # --- test matrix ---
 [project.optional-dependencies]
@@ -76,8 +76,8 @@ dependencies = [
 python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
 [tool.hatch.envs.test.scripts]
-run = "pytest {args:tests}"
-cov = "pytest --cov=pyOptiGTest --cov-report=term-missing {args:tests}"
+run = "pytest {args:pyOptiGTest/tests}"
+cov = "pytest --cov=pyOptiGTest --cov-report=term-missing {args:pyOptiGTest/tests}"
 
 # --- lint env ---
 [tool.hatch.envs.lint]
@@ -86,8 +86,8 @@ dependencies = [
 ]
 
 [tool.hatch.envs.lint.scripts]
-check = "ruff check pyOptiGTest tests"
-format = "ruff format pyOptiGTest tests"
+check = "ruff check pyOptiGTest"
+format = "ruff format pyOptiGTest"
 
 # --- publish env ---
 [tool.hatch.envs.publish]
@@ -106,8 +106,8 @@ upload-test = "twine upload --repository testpypi dist/*"
 # ---------------------------------------------------------------------------
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["tests"]
+testpaths = ["pyOptiGTest/tests"]
+pythonpath = ["pyOptiGTest/tests"]
 addopts = ["-v", "--tb=short"]
 markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
