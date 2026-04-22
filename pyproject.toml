@@ -79,9 +79,17 @@ dependencies = [
 [[tool.hatch.envs.test.matrix]]
 python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
-[tool.hatch.envs.test.scripts]
+[tool.hatch.envs.hatch-test.scripts]
 run = "pytest {args:pyOptiGTest/tests}"
-cov = "pytest --cov=pyOptiGTest --cov-report=term-missing {args:pyOptiGTest/tests}"
+cov = "pytest --cov=pyOptiGTest --cov-report=xml {args:pyOptiGTest/tests}"
+run-cov = "coverage run -m pytest -n auto {args:pyOptiGTest/tests}"
+cov-combine = "coverage combine"
+cov-report = [
+  "coverage report",
+  "coverage xml",
+  "coverage html"
+]
+
 
 # --- lint env ---
 [tool.hatch.envs.lint]
@@ -100,10 +108,10 @@ dependencies = [
     "build",
 ]
 
-[tool.hatch.envs.publish.scripts]
-build = "python -m build"
-upload = "twine upload dist/*"
-upload-test = "twine upload --repository testpypi dist/*"
+#[tool.hatch.envs.publish.scripts]
+#build = "python -m build"
+#upload = "twine upload dist/*"
+#upload-test = "twine upload --repository testpypi dist/*"
 
 # ---------------------------------------------------------------------------
 # Pytest

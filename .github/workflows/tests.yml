@@ -28,13 +28,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install -e ".[dev]" || python -m pip install -e .
-          python -m pip install pytest pytest-cov numpy
+          # python -m pip install --upgrade pip
+          # python -m pip install -e ".[dev]" || python -m pip install -e .
+          # python -m pip install pytest pytest-cov numpy
+          pipx install hatch
 
       - name: Run tests
         run: |
-          python -m pytest tests/ -v --tb=short -m "not genpictures" --cov=pyOptiGTest --cov-report=xml
+          # python -m pytest pyOptiGTest/tests/ -v --tb=short -m "not genpictures" --cov=pyOptiGTest --cov-report=xml
+          hatch test --cover
 
       - name: Upload coverage
         if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.13'
