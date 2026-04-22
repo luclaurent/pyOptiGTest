@@ -98,7 +98,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: python-dist
-          path: dist/
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
           retention-days: 1
 
   publish:
