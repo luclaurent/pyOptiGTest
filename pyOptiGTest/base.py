@@ -203,7 +203,7 @@ class TestFunction(ABC):
     # ------------------------------------------------------------------
 
     @staticmethod
-    def from_name(fun_name: str) -> TestFunction:
+    def from_name(fun_name: str) -> Any:
         """Instantiate a :class:`TestFunction` by its function name string.
 
         Parameters

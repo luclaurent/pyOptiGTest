@@ -30,9 +30,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/luclaurent/optigtest"
-Repository = "https://github.com/luclaurent/optigtest"
-Issues = "https://github.com/luclaurent/optigtest/issues"
+Homepage = "https://github.com/luclaurent/pyoptigtest"
+Repository = "https://github.com/luclaurent/pyoptigtest"
+Issues = "https://github.com/luclaurent/pyoptigtest/issues"
 
 # ---------------------------------------------------------------------------
 # Hatch environments
@@ -61,6 +61,7 @@ test-cov = "pytest --cov=pyOptiGTest --cov-report=term-missing {args:tests}"
 # --- test matrix ---
 [tool.hatch.envs.test]
 dependencies = [
+    "scipy",
     "pytest>=7",
     "pytest-cov",
 ]
