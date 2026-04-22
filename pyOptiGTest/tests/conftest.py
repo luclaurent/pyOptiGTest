@@ -36,7 +36,7 @@ def pytest_collection_modifyitems(config: pytest.Config, items: list[pytest.Item
 # Paths
 # ---------------------------------------------------------------------------
 
-ROOT: pathlib.Path = pathlib.Path(__file__).resolve().parent.parent
+ROOT: pathlib.Path = pathlib.Path(__file__).resolve().parent.parent.parent
 FUNCTIONS_DIR: pathlib.Path = ROOT / "pyOptiGTest" / "functions"
 _JSON_FILE: pathlib.Path = pathlib.Path(__file__).resolve().parent / "conftest.json"
 

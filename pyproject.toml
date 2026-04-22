@@ -54,9 +54,6 @@ dependencies = [
     "pytest-cov",
 ]
 
-[tool.hatch.envs.default.scripts]
-test = "pytest {args:pyOptiGTest/tests}"
-test-cov = "pytest --cov=pyOptiGTest --cov-report=term-missing {args:pyOptiGTest/tests}"
 
 # --- test matrix ---
 [project.optional-dependencies]
@@ -66,6 +63,13 @@ test = [
     "pytest-cov",
 ]
 [tool.hatch.envs.test]
+dependencies = [
+    "scipy",
+    "pytest>=7",
+    "pytest-cov",
+]
+[tool.hatch.envs.hatch-test]
+default-args = ["pyOptiGTest/tests"]
 dependencies = [
     "scipy",
     "pytest>=7",
